@@ -1,0 +1,27 @@
+var classUnifiedAutomation_1_1UaServer_1_1BaseEventModel =
+[
+    [ "BaseEventModel", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a32c9271f09555d83ee4e54771decc20e", null ],
+    [ "BaseEventModel", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a517ca4d81b9776608e3de6bbc77ec519", null ],
+    [ "CreateEvent", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a1d1f573340539a7aa17e312252510180", null ],
+    [ "NewId", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#afcc913af2121f4c032fe39e8a51931aa", null ],
+    [ "SetRolePermissions", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a49c436712cacba0c60593028406f13cd", null ],
+    [ "SetRolePermissionsAndAccessRestriction", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#aab84eeed2cd2281a19b0c181b49130e4", null ],
+    [ "UpdateEvent", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#aa416cb9fd7f4b1cdd8f4ff8354ea3877", null ],
+    [ "AccessRestriction", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#ad377261b4661d8c3cb687875ff433897", null ],
+    [ "ConditionClassId", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a4de796ace3eb3941b4971bad66af1789", null ],
+    [ "ConditionClassName", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a56e7486a79ea27d76b6330f779990298", null ],
+    [ "ConditionSubClassId", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a756bab4dfc4bb3c42db4ed0a0605e848", null ],
+    [ "ConditionSubClassName", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#aac196fcdcba8269c522587086b6c15b2", null ],
+    [ "EventId", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a099bf71c645134059e0dc1ef2f81c9ff", null ],
+    [ "EventType", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a72ba886de5b8b5b51cc2e49b2c0e1383", null ],
+    [ "LocalTime", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#aa8f4b548f7658f7ec69fe98dd31f898d", null ],
+    [ "Message", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#ab507bf6deefec2a9c3c8e19899fdadab", null ],
+    [ "NodeAccessInfo", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a3d0ad1c4ab737a7c28b7a7f63a07ae82", null ],
+    [ "NodeId", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a2edc6e4204b4d6eff5ed5a790169c31a", null ],
+    [ "ReceiveTime", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#ae8d78cfbf2c051e93a774e92f4092e72", null ],
+    [ "RolePermissions", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a9a0d10b9f1f2c7f8cff1237750f893bd", null ],
+    [ "Severity", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#ae2435587eda964ee12470a95093aade8", null ],
+    [ "SourceName", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#aba6902f9f1106e3dafadc09d7693adfe", null ],
+    [ "SourceNode", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a1160407cbea4ede2d8819325be23f7fb", null ],
+    [ "Time", "classUnifiedAutomation_1_1UaServer_1_1BaseEventModel.html#a4bd6f2a55ea3c30fa41f5c02df448baa", null ]
+];

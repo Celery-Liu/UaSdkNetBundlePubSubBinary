@@ -1,0 +1,188 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0; net8.0-windows</TargetFrameworks>
+    <AssemblyName>UaServerNET</AssemblyName>
+    <RootNamespace>UnifiedAutomation.DemoServer</RootNamespace>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+
+    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <FileAlignment>512</FileAlignment>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Bin'">
+    <OutputPath>..\..\bin\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.BouncyCastle" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.Json" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaServer" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaPubSub" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaPubSub.Mqtt" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.Windows" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.Json" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaServer" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaPubSub" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaPubSub.Mqtt" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="obj\**" />
+    <Compile Remove="Data\EventHistorySchema.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\WorkOrderVariableModelController.cs" Link="Controllers\WorkOrderVariableModelController.cs" />
+    <Compile Include="Data\EventHistorySchema.cs" Link="Demo\EventHistorySchema.cs" />
+    <Compile Include="Demo\DataGenerator.cs" Link="Demo\DataGenerator.cs" />
+    <Compile Include="Demo\DemoNodeManager.AccessControl.cs" Link="Demo\DemoNodeManager.AccessControl.cs" />
+    <Compile Include="Demo\DemoNodeManager.Boiler.cs" Link="Demo\DemoNodeManager.Boiler.cs" />
+    <Compile Include="Demo\DemoNodeManager.cs" Link="Demo\DemoNodeManager.cs" />
+    <Compile Include="Demo\DemoNodeManager.Events.cs" Link="Demo\DemoNodeManager.Events.cs" />
+    <Compile Include="Demo\DemoNodeManager.File.cs" Link="Demo\DemoNodeManager.File.cs" />
+    <Compile Include="Demo\DemoNodeManager.GenericDataTypes.cs" Link="Demo\DemoNodeManager.GenericDataTypes.cs" />
+    <Compile Include="Demo\DemoNodeManager.History.cs" Link="Demo\DemoNodeManager.History.cs" />
+    <Compile Include="Demo\DemoNodeManager.Methods.cs" Link="Demo\DemoNodeManager.Methods.cs" />
+    <Compile Include="Demo\DemoNodeManager.SlowDataSource.cs" Link="Demo\DemoNodeManager.SlowDataSource.cs" />
+    <Compile Include="Demo\DemoNodeManager.SpecialTemporaryFileTransfer.cs" Link="Demo\DemoNodeManager.SpecialTemporaryFileTransfer.cs" />
+    <Compile Include="Demo\DemoNodeManager.StateMachines.cs" Link="Demo\DemoNodeManager.StateMachines.cs" />
+    <Compile Include="Demo\HistoryEventSource.cs" Link="Demo\HistoryEventSource.cs" />
+    <Compile Include="Demo\HistoryValueDataSource.cs" Link="Demo\HistoryValueDataSource.cs" />
+    <Compile Include="Demo\LargeArrayNodeManager.cs" Link="Demo\LargeArrayNodeManager.cs" />
+    <Compile Include="Demo\ValueDataStore.cs" Link="Demo\ValueDataStore.cs" />
+    <Compile Include="Model\ModelClasses.cs" Link="Model\ModelClasses.cs" />
+    <Compile Include="Model\ModelIdentifiers.cs" Link="Model\ModelIdentifiers.cs" />
+    <Compile Include="Model\ModelTypes.cs" Link="Model\ModelTypes.cs" />
+    <Compile Include="Program.NetCore.cs" Link="Program.NetCore.cs" />
+    <Compile Include="Program.Configuration.cs" Link="Program.Configuration.cs" />
+    <Compile Include="TestServerManager.cs" Link="TestServerManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" Link="Properties\AssemblyInfo.cs" />
+    <Compile Include="KeyCredentials\FileBasedKeyCredentialStoreItem.cs" Link="KeyCredentials\FileBasedKeyCredentialStoreItem.cs" />
+    <Compile Include="KeyCredentials\FileBasedKeyCredentialStore.cs" Link="KeyCredentials\FileBasedKeyCredentialStore.cs" />
+    <Compile Include="KeyCredentials\FileBasedKeyCredentialStoreSettings.cs" Link="KeyCredentials\FileBasedKeyCredentialStoreSettings.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
+    <Compile Include="Program.cs" Link="Program.cs" />
+    <Compile Remove="Program.NetCore.cs" Link="Program.NetCore.cs" />
+    <Compile Include="Forms\CreateCertificateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Forms\CreateCertificateDialog.Designer.cs">
+      <DependentUpon>CreateCertificateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TrustCertificateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrustCertificateDialog.Designer.cs">
+      <DependentUpon>TrustCertificateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowEndpointUrlDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowEndpointUrlDlg.Designer.cs">
+      <DependentUpon>ShowEndpointUrlDlg.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="App.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Animation\animation.gif" Link="Data\Animation\animation.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_0.gif" Link="Data\Animation\animation_0.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_1.gif" Link="Data\Animation\animation_1.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_10.gif" Link="Data\Animation\animation_10.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_11.gif" Link="Data\Animation\animation_11.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_12.gif" Link="Data\Animation\animation_12.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_13.gif" Link="Data\Animation\animation_13.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_14.gif" Link="Data\Animation\animation_14.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_15.gif" Link="Data\Animation\animation_15.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_16.gif" Link="Data\Animation\animation_16.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_17.gif" Link="Data\Animation\animation_17.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_18.gif" Link="Data\Animation\animation_18.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_19.gif" Link="Data\Animation\animation_19.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_2.gif" Link="Data\Animation\animation_2.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_20.gif" Link="Data\Animation\animation_20.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_21.gif" Link="Data\Animation\animation_21.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_22.gif" Link="Data\Animation\animation_22.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_23.gif" Link="Data\Animation\animation_23.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_24.gif" Link="Data\Animation\animation_24.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_25.gif" Link="Data\Animation\animation_25.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_26.gif" Link="Data\Animation\animation_26.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_27.gif" Link="Data\Animation\animation_27.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_28.gif" Link="Data\Animation\animation_28.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_29.gif" Link="Data\Animation\animation_29.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_3.gif" Link="Data\Animation\animation_3.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_4.gif" Link="Data\Animation\animation_4.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_5.gif" Link="Data\Animation\animation_5.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_6.gif" Link="Data\Animation\animation_6.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_7.gif" Link="Data\Animation\animation_7.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_8.gif" Link="Data\Animation\animation_8.gif" />
+    <EmbeddedResource Include="Data\Animation\animation_9.gif" Link="Data\Animation\animation_9.gif" />
+    <EmbeddedResource Include="Data\Historian1.txt" Link="Data\Historian1.txt" />
+    <EmbeddedResource Include="Data\Historian2.txt" Link="Data\Historian2.txt" />
+    <EmbeddedResource Include="Data\Historian3.txt" Link="Data\Historian3.txt" />
+    <EmbeddedResource Include="Data\Historian4.txt" Link="Data\Historian4.txt" />
+    <EmbeddedResource Include="Data\NotifierWithHistory.xml" Link="Data\NotifierWithHistory.xml" />
+    <EmbeddedResource Include="Demo\LocalizedData.txt" Link="Data\LocalizedData.txt" />
+    <EmbeddedResource Include="License\License.lic" Link="License\License.lic" />
+    <EmbeddedResource Include="Model\demoserver.xml" Link="Model\demoserver.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Data\Animation\" />
+    <Folder Include="Demo\" />
+    <Folder Include="License\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+
+</Project>

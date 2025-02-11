@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>Quickstart Examples</title>
+  <style type="text/css">
+  body {
+    background-color:#fff;
+    color: #5f5f5f;
+    font-family: Verdana, sans-serif;
+    }
+  #header {
+    background-image: url("images/header_inner_bg.gif");
+    background-position: left top;
+    background-repeat: repeat-x;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #header_inner_left {
+    background-image: url("images/header_inner_inner_bg.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  #header_logo {
+    margin-left: 11px;
+    margin-top: 9px;
+  }
+  #navbar {
+    position: absolute;
+    left: 0px;
+    top: 111px;
+    background-color: #F1F1F1;
+    color: #9F9F9F;
+    height: 26px;
+    width: 100%;
+  }
+  #subtitle {
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 6px;
+  }
+  #settings {
+  position: absolute;
+  top: 4px;
+  right: 15px;
+  }
+  #content {
+  position: relative;
+  top: 161px;
+  height: 100%;
+  width: 100%;
+  }
+  #content_left {
+  background-image: url("images/bg.png");
+  width:240px;
+  height: 359px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  }
+  #content_center {
+  background-image: url("images/bg.png");
+  width:240px;
+  position: absolute;
+  margin-left: -120px;
+  top: 0px;
+  left: 50%;
+  height: 359px;
+  }
+  #content_right {
+  background-image: url("images/bg.png");
+  width:240px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 359px;
+  }
+  div.button {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  }
+  div.description {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  font-size: 14px;
+  width: 188px;
+  }
+  img {
+  border: none;
+  }
+  </style>
+</head>
+<body>
+<div id="header">
+  <div id="header_inner_left">
+    <img id="header_logo" alt="Unified Automation logo" src="images/header_logo.jpg" />
+  </div>
+</div>
+<div id="navbar">
+  <div id="subtitle">.NET based OPC UA SDK 4.1.0.556</div>
+  <div id="settings"><a href="index.html#DefaultServer"><img alt="Change Default Server" src="images/default_server.png" /></a></div>
+</div>
+<div id="content">
+  <div id="content_left">
+    <div class="button">
+      <a href="index.html#Connect"><img alt="Connect" src="images/connect.png" /></a>
+    </div>
+    <div class="description">
+      <p>This section contains examples for different features related to connection establishment like server discovery, certificate management and different options to create the connection to the OPC UA server.</p>
+    </div>
+  </div>
+  <div id="content_center">
+    <div class="button">
+      <a href="index.html#Session"><img alt="Session" src="images/session.png" /></a>
+    </div>
+    <div class="description">
+      <p>Provides examples for session releated OPC UA functionality like browse, read, write, method call or history access.</p>
+      <p>The different examples are self contained, each in one dialog and source code file. The configured default server is used to execute the examples.</p>
+    </div>
+  </div>
+  <div id="content_right">
+    <div class="button">
+      <a href="index.html#Subscription"><img alt="Subscription" src="images/subscription.png" /></a>
+    </div>
+    <div class="description">
+      <p>Subscription related examples for data and event monitoring are provided in this section.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

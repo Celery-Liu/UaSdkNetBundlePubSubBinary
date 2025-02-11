@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UserConfiguration"
+    targetNamespace="http://unifiedautomation.com/schemas/UserConfiguration.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://unifiedautomation.com/schemas/UserConfiguration.xsd"
+    xmlns:tns="http://opcfoundation.org/schemas/UA/1.05/Opc.Ua.Types.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:complexType name="UserConfiguration">
+    <xs:sequence>
+      <xs:element name="UserProfiles" type="ListOfProfiles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserConfiguration" type="UserConfiguration" />
+
+  <xs:complexType name="ListOfProfiles">
+    <xs:sequence>
+      <xs:element name="User" type="UserProfile" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+<!-- Each user will be stored as a UserProfile. -->
+  <xs:complexType name="UserProfile">
+    <xs:sequence>
+      <xs:element name="Username" type="xs:string" />
+      <xs:element name="Password" type="Password" />
+      <xs:element name="UserConfigurationMask" type="UserConfigurationMask" minOccurs="0" default="0" />
+      <xs:element name="Description" type="xs:string" minOccurs="0" default="" />
+    </xs:sequence>
+  </xs:complexType>
+<!-- The Password type allows two types of passwords. -->
+  <xs:complexType name="Password">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="HashContainer" type="HashContainer" />
+        <!-- The PasswordClearText will only be used to configure users before startup the Server. -->
+        <xs:element name="PasswordClearText" type="xs:string" />
+      </xs:choice>
+       <!-- Algorithm and Loops can be set for each UserProfile individually. If not set, the Server configuration will be used. -->
+      <xs:element name="Algorithm" type="xs:string" minOccurs="0" default="SHA512" />
+       <!-- Hashes with zero Loops mean no hashing and is not allowed. Setting Loops to "0" will use the Server configuration. -->
+      <xs:element name="Loops" type="LoopCount" minOccurs="0" default="5000" />
+    </xs:sequence>
+  </xs:complexType>
+ <!-- The HashContainer will store the encrypted password as hash and salt after starting the Server. --> 
+  <xs:complexType name="HashContainer">
+    <xs:sequence>
+        <xs:element name="Hash" type="xs:string" />
+        <xs:element name="Salt" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="LoopCount">
+    <xs:restriction base="xs:unsignedInt">
+      <xs:minInclusive value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+ <!-- The UserConfigurationMask contains more user option as bit mask. 
+        None               0 No configuration.
+        NoDelete           1 The user cannot be deleted.
+        Disabled           2 The user is disabled.
+        NoChangeByUser     4 The user cannot change the password.
+        MustChangePassword 8 The user must change the password to get the assigned roles.-->
+  <xs:simpleType name="UserConfigurationMask">
+    <xs:restriction base="xs:unsignedInt">
+      <xs:maxInclusive value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

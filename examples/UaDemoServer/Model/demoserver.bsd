@@ -1,0 +1,159 @@
+<opc:TypeDictionary TargetNamespace="http://www.unifiedautomation.com/DemoServer/" xmlns:ua="http://opcfoundation.org/UA/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DefaultByteOrder="LittleEndian" xmlns:tns="http://www.unifiedautomation.com/DemoServer/" xmlns:opc="http://opcfoundation.org/BinarySchema/">
+    <opc:Import Namespace="http://opcfoundation.org/UA/"/>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="AbstractBaseType">
+        <opc:Field Name="Double" TypeName="opc:Double"/>
+        <opc:Field Name="Int16" TypeName="opc:Int16"/>
+        <opc:Field Name="UInt32" TypeName="opc:UInt32"/>
+        <opc:Field Name="String" TypeName="opc:CharArray"/>
+        <opc:Field Name="QualifiedName" TypeName="ua:QualifiedName"/>
+        <opc:Field Name="LocalizedText" TypeName="ua:LocalizedText"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="tns:AbstractBaseType" Name="ConcreteSubType">
+        <opc:Field Name="Double" SourceType="tns:AbstractBaseType" TypeName="opc:Double"/>
+        <opc:Field Name="Int16" SourceType="tns:AbstractBaseType" TypeName="opc:Int16"/>
+        <opc:Field Name="UInt32" SourceType="tns:AbstractBaseType" TypeName="opc:UInt32"/>
+        <opc:Field Name="String" SourceType="tns:AbstractBaseType" TypeName="opc:CharArray"/>
+        <opc:Field Name="QualifiedName" SourceType="tns:AbstractBaseType" TypeName="ua:QualifiedName"/>
+        <opc:Field Name="LocalizedText" SourceType="tns:AbstractBaseType" TypeName="ua:LocalizedText"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="tns:ConcreteSubType" Name="ExtendedSubType">
+        <opc:Field Name="Double" SourceType="tns:AbstractBaseType" TypeName="opc:Double"/>
+        <opc:Field Name="Int16" SourceType="tns:AbstractBaseType" TypeName="opc:Int16"/>
+        <opc:Field Name="UInt32" SourceType="tns:AbstractBaseType" TypeName="opc:UInt32"/>
+        <opc:Field Name="String" SourceType="tns:AbstractBaseType" TypeName="opc:CharArray"/>
+        <opc:Field Name="QualifiedName" SourceType="tns:AbstractBaseType" TypeName="ua:QualifiedName"/>
+        <opc:Field Name="LocalizedText" SourceType="tns:AbstractBaseType" TypeName="ua:LocalizedText"/>
+        <opc:Field Name="OptionSet" TypeName="tns:OptionSetUInt64"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:OptionSet" Name="AccessRights">
+        <opc:Field Name="Value" TypeName="opc:ByteString"/>
+        <opc:Field Name="ValidBits" TypeName="opc:ByteString"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:OptionSet" Name="OptionSetBase">
+        <opc:Field Name="Value" TypeName="opc:ByteString"/>
+        <opc:Field Name="ValidBits" TypeName="opc:ByteString"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="StructureWithAbstractBaseTypes">
+        <opc:Field Name="Base1" TypeName="ua:ExtensionObject"/>
+        <opc:Field Name="Base2" TypeName="ua:ExtensionObject"/>
+        <opc:Field Name="Base3" TypeName="ua:Variant"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="StructureWithAllowSubtypes">
+        <opc:Field Name="Base1" TypeName="ua:ExtensionObject"/>
+        <opc:Field Name="Base2" TypeName="ua:ExtensionObject"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="StructureWithDerivedStructures">
+        <opc:Field Name="BuildInfo" TypeName="ua:BuildInfo"/>
+        <opc:Field Name="Vector" TypeName="tns:Vector"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="StructureWithDifferentDataTypes">
+        <opc:Field Name="OptionSetType" TypeName="tns:OptionSetBase"/>
+        <opc:Field Name="EnumerationType" TypeName="tns:HeaterStatus"/>
+        <opc:Field Name="StructureType" TypeName="tns:Vector"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="StructureWithOptionalFields">
+        <opc:Field Name="OptionalInt32Specified" TypeName="opc:Bit"/>
+        <opc:Field Name="OptionalStringArraySpecified" TypeName="opc:Bit"/>
+        <opc:Field Name="Reserved1" Length="30" TypeName="opc:Bit"/>
+        <opc:Field Name="MandatoryInt32" TypeName="opc:Int32"/>
+        <opc:Field Name="OptionalInt32" TypeName="opc:Int32" SwitchField="OptionalInt32Specified"/>
+        <opc:Field Name="NoOfMandatoryStringArray" TypeName="opc:Int32"/>
+        <opc:Field Name="MandatoryStringArray" LengthField="NoOfMandatoryStringArray" TypeName="opc:CharArray"/>
+        <opc:Field Name="NoOfOptionalStringArray" TypeName="opc:Int32" SwitchField="OptionalStringArraySpecified"/>
+        <opc:Field Name="OptionalStringArray" LengthField="NoOfOptionalStringArray" TypeName="opc:CharArray" SwitchField="OptionalStringArraySpecified"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:Union" Name="UnionTest">
+        <opc:Field Name="SwitchField" TypeName="opc:UInt32"/>
+        <opc:Field Name="Int32" TypeName="opc:Int32" SwitchField="SwitchField" SwitchValue="1"/>
+        <opc:Field Name="String" TypeName="opc:CharArray" SwitchField="SwitchField" SwitchValue="2"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="Vector">
+        <opc:Field Name="X" TypeName="opc:Double"/>
+        <opc:Field Name="Y" TypeName="opc:Double"/>
+        <opc:Field Name="Z" TypeName="opc:Double"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="WorkOrderStatusType">
+        <opc:Field Name="Actor" TypeName="opc:CharArray"/>
+        <opc:Field Name="Timestamp" TypeName="opc:DateTime"/>
+        <opc:Field Name="Comment" TypeName="ua:LocalizedText"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="WorkOrderType">
+        <opc:Field Name="ID" TypeName="opc:Guid"/>
+        <opc:Field Name="AssetID" TypeName="opc:CharArray"/>
+        <opc:Field Name="StartTime" TypeName="opc:DateTime"/>
+        <opc:Field Name="NoOfStatusComments" TypeName="opc:Int32"/>
+        <opc:Field Name="StatusComments" LengthField="NoOfStatusComments" TypeName="tns:WorkOrderStatusType"/>
+    </opc:StructuredType>
+    <opc:EnumeratedType Name="HeaterStatus" LengthInBits="32">
+        <opc:EnumeratedValue Name="Off" Value="0"/>
+        <opc:EnumeratedValue Name="Heating" Value="1"/>
+        <opc:EnumeratedValue Name="Cooling" Value="2"/>
+    </opc:EnumeratedType>
+    <opc:EnumeratedType Name="Priority" LengthInBits="32">
+        <opc:Documentation>This enumerated value defines its possible values in an EnumValues property</opc:Documentation>
+        <opc:EnumeratedValue Name="Low" Value="10"/>
+        <opc:EnumeratedValue Name="Normal" Value="40"/>
+        <opc:EnumeratedValue Name="High" Value="70"/>
+        <opc:EnumeratedValue Name="Urgent" Value="90"/>
+        <opc:EnumeratedValue Name="Immediate" Value="100"/>
+    </opc:EnumeratedType>
+    <opc:EnumeratedType Name="OptionSetByte" IsOptionSet="true" LengthInBits="8">
+        <opc:EnumeratedValue Name="ERROR" Value="0"/>
+        <opc:EnumeratedValue Name="WARNING" Value="1"/>
+        <opc:EnumeratedValue Name="SYSTEM" Value="2"/>
+        <opc:EnumeratedValue Name="INFO" Value="3"/>
+        <opc:EnumeratedValue Name="DEBUG" Value="4"/>
+        <opc:EnumeratedValue Name="CONTENT" Value="5"/>
+    </opc:EnumeratedType>
+    <opc:EnumeratedType Name="OptionSetUInt16" IsOptionSet="true" LengthInBits="16">
+        <opc:EnumeratedValue Name="ERROR" Value="0"/>
+        <opc:EnumeratedValue Name="WARNING" Value="1"/>
+        <opc:EnumeratedValue Name="SYSTEM" Value="2"/>
+        <opc:EnumeratedValue Name="INFO" Value="3"/>
+        <opc:EnumeratedValue Name="DEBUG" Value="4"/>
+        <opc:EnumeratedValue Name="CONTENT" Value="5"/>
+    </opc:EnumeratedType>
+    <opc:EnumeratedType Name="OptionSetUInt32" IsOptionSet="true" LengthInBits="32">
+        <opc:EnumeratedValue Name="ERROR" Value="0"/>
+        <opc:EnumeratedValue Name="WARNING" Value="1"/>
+        <opc:EnumeratedValue Name="SYSTEM" Value="2"/>
+        <opc:EnumeratedValue Name="INFO" Value="3"/>
+        <opc:EnumeratedValue Name="DEBUG" Value="4"/>
+        <opc:EnumeratedValue Name="CONTENT" Value="5"/>
+    </opc:EnumeratedType>
+    <opc:EnumeratedType Name="OptionSetUInt64" IsOptionSet="true" LengthInBits="64">
+        <opc:EnumeratedValue Name="AA" Value="0"/>
+        <opc:EnumeratedValue Name="BB" Value="1"/>
+        <opc:EnumeratedValue Name="CC" Value="2"/>
+        <opc:EnumeratedValue Name="DD" Value="3"/>
+        <opc:EnumeratedValue Name="EE" Value="4"/>
+        <opc:EnumeratedValue Name="FF" Value="5"/>
+        <opc:EnumeratedValue Name="GG" Value="6"/>
+        <opc:EnumeratedValue Name="HH" Value="7"/>
+        <opc:EnumeratedValue Name="II" Value="8"/>
+        <opc:EnumeratedValue Name="JJ" Value="9"/>
+        <opc:EnumeratedValue Name="KK" Value="10"/>
+        <opc:EnumeratedValue Name="LL" Value="11"/>
+        <opc:EnumeratedValue Name="MM" Value="12"/>
+        <opc:EnumeratedValue Name="NN" Value="13"/>
+        <opc:EnumeratedValue Name="OO" Value="14"/>
+        <opc:EnumeratedValue Name="PP" Value="15"/>
+        <opc:EnumeratedValue Name="QQ" Value="16"/>
+        <opc:EnumeratedValue Name="RR" Value="17"/>
+        <opc:EnumeratedValue Name="SS" Value="18"/>
+        <opc:EnumeratedValue Name="TT" Value="19"/>
+        <opc:EnumeratedValue Name="UU" Value="20"/>
+        <opc:EnumeratedValue Name="VV" Value="21"/>
+        <opc:EnumeratedValue Name="WW" Value="22"/>
+        <opc:EnumeratedValue Name="XX" Value="23"/>
+        <opc:EnumeratedValue Name="YY" Value="24"/>
+        <opc:EnumeratedValue Name="ZZ" Value="25"/>
+        <opc:EnumeratedValue Name="AAAA" Value="26"/>
+        <opc:EnumeratedValue Name="BBBB" Value="27"/>
+        <opc:EnumeratedValue Name="CCCC" Value="28"/>
+        <opc:EnumeratedValue Name="DDDD" Value="29"/>
+        <opc:EnumeratedValue Name="EEE" Value="30"/>
+        <opc:EnumeratedValue Name="FFFF" Value="31"/>
+        <opc:EnumeratedValue Name="GGG" Value="32"/>
+    </opc:EnumeratedType>
+</opc:TypeDictionary>

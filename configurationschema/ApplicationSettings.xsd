@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SecuredApplication"
+    targetNamespace="http://unifiedautomation.com/schemas/2011/12/Application.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://unifiedautomation.com/schemas/2011/12/Application.xsd"
+    xmlns:mstns="http://unifiedautomation.com/schemas/2011/12/Application.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:complexType name="TransportSettings">
+    <xs:sequence>
+      <xs:element name="MaxBufferSize" type="xs:unsignedInt" minOccurs="0" default="65535" />
+      <xs:element name="MaxStringLength" type="xs:unsignedInt" minOccurs="0" default="16777216" />
+      <xs:element name="MaxByteStringLength" type="xs:unsignedInt" minOccurs="0" default="16777216" />
+      <xs:element name="MaxArrayLength" type="xs:unsignedInt" minOccurs="0" default="65535" />
+      <xs:element name="MaxMessageSize" type="xs:unsignedInt" minOccurs="0" default="16777216" />
+      <xs:element name="OperationTimeout" type="xs:unsignedInt" minOccurs="0" default="120000" />
+      <xs:element name="ChannelLifetime" type="xs:unsignedInt" minOccurs="0" default="120000" />
+      <xs:element name="InactiveChannelLifetime" type="xs:unsignedInt" minOccurs="0" default="10000" />
+      <xs:element name="MaxChannelCount" type="xs:unsignedInt" minOccurs="0" default="110" />
+      <xs:element name="SecurityTokenLifetime" type="xs:unsignedInt" minOccurs="0" default="3600000" />
+      <xs:element name="MaxCallDepth" type="xs:unsignedInt" minOccurs="0" default="100" />
+      <xs:element name="MaxChunkCount" type="xs:unsignedInt" minOccurs="0" default="256" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransportSettings" type="TransportSettings" />
+
+  <xs:complexType name="InstallationSettings">
+    <xs:sequence>
+      <xs:element name="GenerateCertificateIfNone" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="CertificateKeyLength" type="xs:unsignedShort" minOccurs="0" default="0" />
+      <xs:element name="CertificateHashAlgorithm" type="xs:string" minOccurs="0" />
+      <xs:element name="CertificateLifetimeInMonths" type="xs:unsignedShort" minOccurs="0" default="120" />
+      <xs:element name="DeleteCertificateOnUninstall" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="ConfigureFirewall" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="InstallAsService" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="ServiceName" type="xs:string" minOccurs="0" />
+      <xs:element name="ServiceDescription" type="xs:string" minOccurs="0" />
+      <xs:element name="ServiceStartMode" type="ServiceStartMode" minOccurs="0" default="Manual" />
+      <xs:element name="UsersGroup" type="xs:string" minOccurs="0" />
+      <xs:element name="AdministratorsGroup" type="xs:string" minOccurs="0" />
+      <xs:element name="SetFilePermissions" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="DisableLdsCertificateExchange" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="LdsTrustedCertificateStore" type="xs:string" minOccurs="0" />
+      <xs:element name="LdsApplicationCertificateFile" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InstallationSettings" type="InstallationSettings" />
+  
+  <xs:complexType name="CertificateStoreSettings">
+    <xs:sequence>
+      <xs:element name="MaxRejectedCertificatesCount" type="xs:unsignedInt" minOccurs="0" default="100" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CertificateStoreSettings" type="CertificateStoreSettings" />
+
+  <xs:simpleType  name="ServiceStartMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="Manual" />
+      <xs:enumeration value="Disabled" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="OnlineTraceConfiguration">
+    <xs:attribute name="Enabled" type="xs:boolean" default="false" />
+    <xs:attribute name="MaxEntriesPerLogMinimum" type="xs:unsignedInt" default="1000" />
+    <xs:attribute name="MaxEntriesPerLogMaximum" type="xs:unsignedInt" default="100000" />
+    <xs:attribute name="MaxLogFileBackupsMaximum" type="xs:unsignedByte" default="5" />
+  </xs:complexType>
+
+  <xs:element name="TraceSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TraceFile" type="xs:string" minOccurs="0" />
+        <xs:element name="MaxEntriesPerLog" type="xs:unsignedInt" minOccurs="0" default="100000" />
+        <xs:element name="MaxLogFileBackups" type="xs:unsignedByte" minOccurs="0" default="5" />
+        <xs:element name="FastTrace" type="xs:boolean"  minOccurs="0" default="false" />
+        <xs:element name="ModuleSettings" type="ListOfModuleTraceSettings" minOccurs="0" />
+        <xs:element name="OnlineConfiguration" type="OnlineTraceConfiguration" minOccurs="0" />
+      </xs:sequence>
+      <xs:attribute name="MasterTraceEnabled" type="xs:boolean" use="optional"  default="false" />
+      <xs:attribute name="DefaultTraceLevel" type="TraceLevel" use="optional" default="Error" />
+      <xs:attribute name="LocalTime" type="xs:boolean" use="optional" default="false"/>
+      <xs:attribute name="TimestampFormat" type="xs:string" use="optional" default="HH:mm.sss"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="ModuleTraceSettings">
+    <xs:attribute name="ModuleName" type="xs:string" />
+    <xs:attribute name="TraceEnabled" type="xs:boolean" use="optional"  default="true" />
+    <xs:attribute name="TraceLevel" type="TraceLevel" use="optional" default="Default" />
+  </xs:complexType>
+
+  <xs:simpleType  name="TraceLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="System" />
+      <xs:enumeration value="Info" />
+      <xs:enumeration value="InterfaceCall" />
+      <xs:enumeration value="Constructor" />
+      <xs:enumeration value="ProgramFlow" />
+      <xs:enumeration value="Data" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ListOfModuleTraceSettings">
+    <xs:sequence>
+      <xs:element name="ModuleTraceSettings" type="ModuleTraceSettings"  maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GdsSettings">
+    <xs:sequence>
+      <xs:element name="GdsDiscoveryUrl" type="xs:string" />
+      <xs:element name="ServerDiscoveryUrls" type="ListOfString" minOccurs="0" />
+      <xs:element name="RetryFrequency" type="xs:unsignedInt" minOccurs="0" default="60000" />
+      <xs:element name="DefaultUpdateFrequency" type="xs:long" minOccurs="0" default="86400000" />
+      <xs:element name="IgnoreGdsDefinedUpdateFrequency" type="xs:boolean" default="false" />
+      <xs:element name="IgnoreLastUpdateTime" type="xs:boolean" default="false" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GdsSettings" type="GdsSettings" />
+
+  <xs:complexType name="ClientSettings">
+    <xs:sequence>
+      <xs:element name="ProductUri" type="xs:string" minOccurs="0" />
+      <xs:element name="DiagnosticsMasks" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="RequestTimeout" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxOperationsPerRequest" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="SessionTimeout" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="WatchdogCycleTime" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="WatchdogTimeout" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="AutomaticReconnect" type="xs:boolean" minOccurs="0" default="true" />
+      <xs:element name="RetryInitialConnect" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="ReconnectDelay" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="ReconnectTimeout" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="ReconnectCreateSubscriptionsDelay" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="ThreadPool" type="ThreadPoolSettings" minOccurs="0" />
+      <xs:element name="DisableIncludeChains" type="xs:boolean" minOccurs="0" default="false" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientSettings" type="ClientSettings" />
+
+  <xs:complexType name="ServerSettings">
+    <xs:sequence>
+      <xs:element name="ProductUri" type="xs:string" minOccurs="0"  />
+      <xs:element name="ProductName" type="xs:string" minOccurs="0" />
+      <xs:element name="ManufacturerName" type="xs:string" minOccurs="0" />
+      <xs:element name="SoftwareVersion" type="xs:string" minOccurs="0"  />
+      <xs:element name="BuildNumber" type="xs:string" minOccurs="0" />
+      <xs:element name="BuildDate" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="IsAuditActivated" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="AvailableLocaleIds" type="ListOfString" minOccurs="0" />
+      <xs:element name="AvailableServerProfiles" type="ListOfString" minOccurs="0" />
+      <xs:element name="UserIdentity" type="UserIdentitySettings" minOccurs="0" />
+      <xs:element name="DiscoveryRegistration" type="DiscoveryRegistrationSettings" minOccurs="0" />
+      <xs:element name="Capabilities" type="ListOfString" minOccurs="0" />
+      <xs:element name="DisableUseLeafCertificateOnlyForSignature" type="xs:boolean" minOccurs="0" />
+      <xs:element name="AllowDepreciatedPolicies" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="SupportedPollingIntervals" type="ListOfUInt32" minOccurs="0" />
+      <xs:element name="RoleConfigurationsFilePath" type="xs:string" minOccurs="0"/>
+      <xs:element name="RedundancyCapabilities" type="RedundancyCapabilities" minOccurs="0"/>
+      <xs:element name="PublishSubscribe" type="PubSubSettings" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServerSettings" type="ServerSettings" />
+
+  <xs:complexType name="EndpointSettings">
+    <xs:sequence>
+      <xs:element name="Endpoint" type="EndpointConfiguration" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndpointSettings" type="EndpointSettings" />
+
+  <xs:complexType name="OutgoingReverseConnectionConfiguration">
+    <xs:sequence>
+      <xs:element name="RemoteClientUrl" type="xs:string" minOccurs="0" />
+      <xs:element name="ConnectRetryInterval" type="xs:unsignedInt" minOccurs="0" default="10" />
+      <xs:element name="ConnectCount" type="xs:unsignedInt" minOccurs="0" default="2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutgoingReverseConnectionConfiguration" type="OutgoingReverseConnectionConfiguration" />
+
+  <xs:complexType name="ListOfOutgoingReverseConnectionConfiguration">
+    <xs:sequence>
+      <xs:element name="OutgoingReverseConnectionConfiguration" type="OutgoingReverseConnectionConfiguration" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfOutgoingReverseConnectionConfiguration" type="ListOfOutgoingReverseConnectionConfiguration" />
+  
+  <xs:complexType name="EndpointConfiguration">
+    <xs:sequence>
+      <xs:element name="NetworkInterface" type="xs:string" minOccurs="0" />
+      <xs:element name="InternetProtocolVersion" type="InternetProtocolVersion" minOccurs="0" default="Any" />
+      <xs:element name="DisableNoSecurity" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="EnableSignOnly" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="DisableSignAndEncrypt" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="NoSecurityUserSecurityPolicy" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="ApplicationCertificateStore" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="ApplicationCertificateSubjectName" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="ApplicationCertificateThumbprint" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="TrustedCertificateStore" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="IssuerCertificateStore" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="DisableIncludeChains" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="MaxSecureChannelCount" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="CertificateConfiguration" type="CertificateConfiguration" minOccurs="0" />
+      <xs:element name="OutgoingReverseConnections" type="ListOfOutgoingReverseConnectionConfiguration" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="EndpointUrl" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:element name="EndpointConfiguration" type="EndpointConfiguration" />
+
+  <xs:simpleType name="InternetProtocolVersion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Any" />
+      <xs:enumeration value="IPv4Only" />
+      <xs:enumeration value="IPv6Only" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ListOfString">
+    <xs:sequence>
+      <xs:element name="String" type="xs:string" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfString" type="ListOfString" />
+  
+  <xs:complexType name="ListOfUInt32">
+    <xs:sequence>
+      <xs:element name="UInt32" type="xs:unsignedInt" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfUInt32" type="ListOfUInt32" />
+
+  <xs:complexType name="DiscoveryRegistrationSettings">
+    <xs:sequence>
+      <xs:element name="Url" type="xs:string" minOccurs="0" />
+      <xs:element name="Enabled" type="xs:boolean" minOccurs="0" default="true" />
+      <xs:element name="RegistrationInterval" type="xs:unsignedShort" minOccurs="0" default="0" />
+      <xs:element name="DisableRegisterServer2"  type="xs:boolean" minOccurs="0" default="false" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiscoveryRegistrationSettings" type="DiscoveryRegistrationSettings" />
+
+  <xs:complexType name="RedundancyCapabilities">
+    <xs:sequence> 
+      <xs:element name="RedundancySupport" type="RedundancySupport" minOccurs="0" default="None" />
+      <xs:element name="AlternativeServerList" type="ListOfString" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RedundancyCapabilities" type="RedundancyCapabilities" />
+
+  <xs:simpleType  name="RedundancySupport">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Cold" />
+      <xs:enumeration value="Warm" />
+      <xs:enumeration value="Hot" />
+      <xs:enumeration value="Transparent" />
+      <xs:enumeration value="HotAndMirrored" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="PubSubSettings">
+    <xs:sequence> 
+      <xs:element name="ConfigurationFile" type="xs:string" minOccurs="0" />
+      <xs:element name="DefaultDatagramPublisherId" type="xs:unsignedLong" minOccurs="0" default="0" />
+      <xs:element name="MaxPubSubConnections" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxWriterGroups" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxReaderGroups" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxDataSetWriters" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxDataSetReaders" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxFieldsPerDataSet" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxSecurityGroups" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxPublishedDataSets" type="xs:unsignedInt" minOccurs="0" default="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PubSubSettings" type="PubSubSettings" />
+
+  <xs:complexType name="UserIdentitySettings">
+    <xs:sequence>
+      <xs:element name="EnableAnonymous" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="EnableUserName" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="EnableCertificate" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="IssuedToken" type="IssuedTokenSettings" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="UserTrustedCertificateStore" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="UserIssuerCertificateStore" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="UserRejectedCertificateStore" type="xs:string" minOccurs="0"></xs:element>
+      <xs:element name="UserCertificateCheckSettings" type="CertificateCheckSettings" minOccurs="0"></xs:element>
+      <xs:element name="UserManagement" type="UserManagementSettings" minOccurs="0"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserIdentitySettings" type="UserIdentitySettings" />
+
+  <xs:complexType name="IssuedTokenSettings">
+    <xs:attribute name="PolicyId" type="xs:string" use="required" />
+    <xs:attribute name="TokenType" type="xs:anyURI" use="required" />
+    <xs:attribute name="EndpointUrl" type="xs:string" use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="UserManagementSettings">
+    <xs:sequence>
+      <xs:element name="DisableOnlineConfiguration" type="xs:boolean" minOccurs="0" default="false"/>
+      <xs:element name="MinPasswordLength" type="xs:unsignedInt" minOccurs="0" default="8" />
+      <xs:element name="MaxPasswordLength" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="PasswordOptions" type="PasswordOptions" minOccurs="0" default="0" />
+      <xs:element name="PasswordRestrictions" type="LocalizedDescriptionText" minOccurs="0" maxOccurs="unbounded"/>	  
+      <xs:element name="HashingAlgorithm" type="HashingAlgorithm" minOccurs="0" default="SHA512" />
+      <xs:element name="HashingLoops" type="LoopCount" minOccurs="0" default="5000" />
+      <xs:element name="MaxUsers" type="xs:unsignedInt" minOccurs="0" default="1000" />
+      <xs:element name="MaxUserNameLength" type="xs:unsignedInt" minOccurs="0" default="100" />
+      <xs:element name="MaxDescriptionLength" type="xs:unsignedInt" minOccurs="0" default="1000" />
+    </xs:sequence>
+   <xs:attribute name="FilePath" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:element name="UserManagementSettings" type="UserManagementSettings" />
+  
+  <xs:complexType name="LocalizedDescriptionText">
+    <xs:attribute name="Locale" type="xs:string" />
+    <xs:attribute name="Text" type="xs:string" />
+  </xs:complexType>
+  
+  <xs:simpleType name="PasswordOptions">
+    <xs:restriction base="xs:unsignedInt">
+      <xs:maxInclusive value="511" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType  name="HashingAlgorithm">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SHA256" />
+      <xs:enumeration value="SHA512" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="LoopCount">
+    <xs:restriction base="xs:unsignedInt">
+      <xs:minInclusive value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ThreadPoolSettings">
+    <xs:sequence>
+      <xs:element name="MinThreadCount" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxThreadCount" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxRequestCount" type="xs:unsignedInt" minOccurs="0" default="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThreadPoolSettings" type="ThreadPoolSettings" />
+
+  <xs:complexType name="SessionSettings">
+    <xs:sequence>
+      <xs:element name="MaxRequestAge" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxSessionCount" type="xs:unsignedInt" minOccurs="0" default="0"  />
+      <xs:element name="MaxSessionsPerClient" type="xs:unsignedInt" minOccurs="0" default="0"  />
+      <xs:element name="MaxOutstandingServiceRequests" type="xs:unsignedInt" minOccurs="0" default="0"  />
+      <xs:element name="MinSessionTimeout" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxSessionTimeout" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxBrowseContinuationPoints" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxHistoryContinuationPoints" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerRead" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerWrite" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerHistoryDataRead" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerHistoryDataUpdate" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerHistoryEventRead" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerHistoryEventUpdate" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerMethodCall" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerBrowse" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerRegisterNodes" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerTranslateBrowsePathsToNodeIds" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNodesPerNodeManagement" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxMonitoredItemsPerCall" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MinNonceLength" type="xs:unsignedInt" minOccurs="0" default="32" />
+      <xs:element name="DisableNonceLengthCheck" type="xs:boolean" minOccurs="0" default="false" />
+      <xs:element name="MaxHistoryDataValuesPerRead" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxHistoryEventsPerRead" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxQueryContinuationPoints" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxRegisteredNodes" type="xs:unsignedInt" default="10000" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionSettings" type="SessionSettings" />
+
+  <xs:complexType name="SubscriptionSettings">
+    <xs:sequence>
+      <xs:element name="MinPublishingInterval" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxPublishingInterval" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxKeepAliveInterval" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MinKeepAliveInterval" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MinLifetime" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxLifetime" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="PublishingIntervalResolution" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxPublishRequestCount" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxSubscriptionCount" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxSubscriptionsPerSession" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxNotificationsPerPublish" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxMessageQueueSize" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxDataValueQueueSize" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MinEventQueueSize" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxEventQueueSize" type="xs:unsignedInt" minOccurs="0" default="0" />
+      <xs:element name="MaxMonitoredItemsPerSubscription" type="xs:unsignedInt" minOccurs="0" default="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubscriptionSettings" type="SubscriptionSettings" />
+
+  <xs:complexType name="SingleCertificateCheckSettings">
+    <xs:attribute name="Thumbprint" type="xs:string" use="optional" default="" />
+    <xs:attribute name="DisableApplicationUriCheck" type="xs:boolean" use="optional"  default="false" />
+    <xs:attribute name="DisableDomainCheck" type="xs:boolean" use="optional"  default="false" />
+    <xs:attribute name="DisableCertificateTimeInvalid" type="xs:boolean" use="optional"  default="false" />
+    <xs:attribute name="DisableCertificateIssuerTimeInvalid" type="xs:boolean" use="optional"  default="false" />
+    <xs:attribute name="DisableCertificateRevocationUnknown" type="xs:boolean" use="optional"  default="false" />
+    <xs:attribute name="DisableCertificateIssuerRevocationUnknown" type="xs:boolean" use="optional"  default="false" />
+    <xs:attribute name="TreatSelfSignedCaFlagAsError" type="xs:boolean" use="optional"  default="false" />
+  </xs:complexType>
+
+  <xs:complexType name="CertificateCheckSettings">
+    <xs:sequence>
+      <xs:element name="Default" type="SingleCertificateCheckSettings" minOccurs="0" />
+      <xs:element name="Certificate" type="SingleCertificateCheckSettings" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CertificateCheckSettings" type="CertificateCheckSettings" />
+
+  <xs:complexType name="CertificateConfiguration">
+    <xs:sequence>
+      <xs:element name="KeyType" type="xs:string" minOccurs="0" />
+      <xs:element name="KeySize" type="xs:unsignedShort" minOccurs="0" default="2048" />
+      <xs:element name="HashSize" type="xs:unsignedShort" minOccurs="0" default="256" />
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

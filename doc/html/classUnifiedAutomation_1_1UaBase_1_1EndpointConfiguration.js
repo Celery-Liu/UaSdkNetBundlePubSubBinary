@@ -1,0 +1,27 @@
+var classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration =
+[
+    [ "EndpointConfiguration", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#ac774d29f0f8d544d46195cfc9dc79965", null ],
+    [ "EndpointConfiguration", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a66cc518f44705ab0c8741e0cb24e0673", null ],
+    [ "Clone", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#aaa5e9daca450d266ca1823447040c41e", null ],
+    [ "Decode", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#aded10248f78efc3fe99bd8346717e559", null ],
+    [ "Encode", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#adc5ad15d0917a11ef601dce075e2f54e", null ],
+    [ "IsEqual", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a8cf3dde103d44f23ce6eeb4c1c8e096b", null ],
+    [ "SetDefaults", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a650555cf9ea67ab82e6e2c2e4b3341b3", null ],
+    [ "Update", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a3adec4366220fc804f20ecd2e458f9c3", null ],
+    [ "BinaryEncodingId", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a4c80ba2ceec94d7a068fe454e891f8d1", null ],
+    [ "ChannelLifetime", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a3e399b5142918bbc40254b7f90b66de7", null ],
+    [ "InactiveChannelLifetime", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#abbdd0d5981a167ff79ebd6309c9762dc", null ],
+    [ "MaxArrayLength", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#ad121ed7069018b5905c95ee49a37f1bf", null ],
+    [ "MaxBufferSize", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#aee5f5d7b39caafc7e5d4ada35e017b5e", null ],
+    [ "MaxByteStringLength", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a3888312484bf8d84a82e8b644e980a28", null ],
+    [ "MaxCallDepth", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a25af8583290c75131888bac6f2e4bd77", null ],
+    [ "MaxChannelCount", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a73b0dc05504d744273d818f5f8eb2d90", null ],
+    [ "MaxChunkCount", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#ac5a78ec1e38c5249c65537bd211f15ec", null ],
+    [ "MaxMessageSize", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a750d7081bc6678be9b8a8cd7e098f53a", null ],
+    [ "MaxStringLength", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#aa96da50727f09273a6c2141509d2116f", null ],
+    [ "OperationTimeout", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#aafaac49df2cd056168cf918fa748d554", null ],
+    [ "SecurityTokenLifetime", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a5a1db7b6968e87b81c0d7569000fddf6", null ],
+    [ "TypeId", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a7abd58efac025bde60c52ed16067aa8a", null ],
+    [ "UseBinaryEncoding", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#ab7515ce02ad0a8025db55122995d7027", null ],
+    [ "XmlEncodingId", "classUnifiedAutomation_1_1UaBase_1_1EndpointConfiguration.html#a0d82b7fee2032ad5e69fb00ff87fa12e", null ]
+];

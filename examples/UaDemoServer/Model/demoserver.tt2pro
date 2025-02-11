@@ -1,0 +1,38 @@
+###########################
+# UaModeler Project File  #
+# Generated at 16.08.2024 #
+###########################
+
+PROJECTNAME = demoserver
+
+TEMPLATESET = ($TEMPLATES)/net/v4_1/t0/net_server.tt2set
+
+MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
+    demoserver.ua
+
+VARIABLES+= demoserver.ua: Namespace=Model; Organization=UnifiedAutomation.Demo; 
+
+COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
+    demoserver.ua: #008000
+
+PROJECTVARIABLES += GenerateDefaultApplication = false \
+    LegacyOutput = true \
+    NetFramework = 4.6.2 \
+    NoMethodFiles = false \
+    ProjectNamespace = Model \
+    ProjectOrganization = UnifiedAutomation.Demo \
+    PubSubMqttJson = false \
+    RolesAndUsers = false
+
+OUTPUTPATH = .
+
+GENERATE += demoserver.ua
+
+LOCKEDMODELS += ($MODELS)/Opc.Ua.NodeSet2.ua
+
+NODEACCESSINFOROLES += Administrator \
+    SecurityAdmin \
+    ConfigurationAdmin \
+    Operator \
+    Observer
+

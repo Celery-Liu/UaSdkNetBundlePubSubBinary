@@ -1,0 +1,28 @@
+var classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel =
+[
+    [ "ServerCapabilitiesModel", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#ad9e0ff2bd37e1d42f932acd091941676", null ],
+    [ "ServerCapabilitiesModel", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a14160c3c8280f65287e98857108eb9cf", null ],
+    [ "AggregateFunctions", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a235684712585882e0027d24a439dd07a", null ],
+    [ "ConformanceUnits", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#ad0686f6e53a3c7b1ba683cfdf97ce587", null ],
+    [ "LocaleIdArray", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a530aa8f3d7db0d65e57e36d7264ce2d0", null ],
+    [ "MaxArrayLength", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#ae7cf4df415f82dbc368c294550e3d776", null ],
+    [ "MaxBrowseContinuationPoints", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a1f0a04dbac21391e1a389a301e6e0749", null ],
+    [ "MaxByteStringLength", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a115b107d31cc4f19ec67d404fb125839", null ],
+    [ "MaxHistoryContinuationPoints", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a643e43631571803a9f74275b00481a4d", null ],
+    [ "MaxMonitoredItems", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a35a3d3823fe886afa6d5759a1f5a6d7f", null ],
+    [ "MaxMonitoredItemsPerSubscription", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a8fa59bb70ff961f1e3ade9892be6e117", null ],
+    [ "MaxMonitoredItemsQueueSize", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#af3dd9d806d885a5518d5f5c2ad381a97", null ],
+    [ "MaxQueryContinuationPoints", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#aaa4ff52e9a747be9c8f09aef0d1bf38b", null ],
+    [ "MaxSelectClauseParameters", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a23f1154440ab5415b13a978e51ef35b5", null ],
+    [ "MaxSessions", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a0a434ab359b83be3ed92237f01a75c19", null ],
+    [ "MaxStringLength", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#ac158b785bd683cd2b3e45fb88acfccce", null ],
+    [ "MaxSubscriptions", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#ae2f42b0a7621f6f9b3fe05f525c5e53d", null ],
+    [ "MaxSubscriptionsPerSession", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#ad7d52ba152cc496da5bd62164051f087", null ],
+    [ "MaxWhereClauseParameters", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a899c1cd5982d8ec348355b868b5667d5", null ],
+    [ "MinSupportedSampleRate", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a6e9cb425dce83e4ba199f399c0ad5366", null ],
+    [ "ModellingRules", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#ac61b23aa2585ef6721273843c82868cd", null ],
+    [ "OperationLimits", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a593ccbe81f2166716f5bc4e91c5d1a3b", null ],
+    [ "RoleSet", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a1337a3d1da7de9a5f4ab2f7e527a289f", null ],
+    [ "ServerProfileArray", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a76ed5a4c1daf0cb79dbb73b5e7ca0fcb", null ],
+    [ "SoftwareCertificates", "classUnifiedAutomation_1_1UaServer_1_1ServerCapabilitiesModel.html#a8de060f3df7cee0c0f67a40cbd18da8f", null ]
+];

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://unifiedautomation.com/schemas/UserConfiguration.xsd">
+  <UserProfiles>
+    <User>
+      <Username>john</Username>
+      <Password>
+        <PasswordClearText>master</PasswordClearText>
+        <Algorithm>SHA512</Algorithm>
+      </Password>
+      <Description>User john. Has the "Engineer" and "ConfigureAdmin" role attached.</Description>
+    </User>
+    <User>
+      <Username>joe</Username>
+      <Password>
+        <PasswordClearText>god</PasswordClearText>
+        <Algorithm>SHA512</Algorithm>
+      </Password>
+      <Description>User joe. Has no role attached.</Description>
+    </User>
+    <User>
+      <Username>sue</Username>
+      <Password>
+        <PasswordClearText>curly</PasswordClearText>
+        <Algorithm>SHA512</Algorithm>
+      </Password>
+      <Description>User sue. Has no role attached.</Description>
+    </User>
+    <User>
+      <Username>root</Username>
+      <Password>
+        <PasswordClearText>secret</PasswordClearText>
+        <Algorithm>SHA512</Algorithm>
+      </Password>
+      <UserConfigurationMask>1</UserConfigurationMask>
+      <Description>The root user. Has "Security Admin" and "Engineer" role attached. Cannot be deleted.</Description>
+    </User>
+  </UserProfiles>
+</UserConfiguration>

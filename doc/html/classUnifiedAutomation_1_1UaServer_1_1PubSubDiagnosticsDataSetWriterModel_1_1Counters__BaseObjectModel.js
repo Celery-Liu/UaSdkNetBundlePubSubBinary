@@ -1,0 +1,5 @@
+var classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsDataSetWriterModel_1_1Counters__BaseObjectModel =
+[
+    [ "Counters_BaseObjectModel", "classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsDataSetWriterModel_1_1Counters__BaseObjectModel.html#acc567330c250a1f9552e19b5024cca0b", null ],
+    [ "FailedDataSetMessages", "classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsDataSetWriterModel_1_1Counters__BaseObjectModel.html#afa8dfefa0cbfc91a53cbdf651838b6a6", null ]
+];

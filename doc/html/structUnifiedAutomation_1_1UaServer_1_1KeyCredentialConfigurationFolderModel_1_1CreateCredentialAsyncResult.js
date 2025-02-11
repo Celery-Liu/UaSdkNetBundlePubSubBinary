@@ -1,0 +1,5 @@
+var structUnifiedAutomation_1_1UaServer_1_1KeyCredentialConfigurationFolderModel_1_1CreateCredentialAsyncResult =
+[
+    [ "CredentialNodeId", "structUnifiedAutomation_1_1UaServer_1_1KeyCredentialConfigurationFolderModel_1_1CreateCredentialAsyncResult.html#a663a57a821eb9a933244e7812dadd21c", null ],
+    [ "StatusCode", "structUnifiedAutomation_1_1UaServer_1_1KeyCredentialConfigurationFolderModel_1_1CreateCredentialAsyncResult.html#a2d0c320b3fe5197bdd3d980dafefee9a", null ]
+];

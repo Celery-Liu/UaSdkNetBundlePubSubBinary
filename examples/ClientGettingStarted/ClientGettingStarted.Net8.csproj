@@ -1,0 +1,498 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <AssemblyName>ClientGettingStarted</AssemblyName>
+    <RootNamespace>UnifiedAutomation.ClientGettingStarted</RootNamespace>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+
+    <OutputType>WinExe</OutputType>
+    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <FileAlignment>512</FileAlignment>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.Windows" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient.Controls" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Common\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\ReverseConnectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\ReverseConnectDialog.Designer.cs">
+      <DependentUpon>ReverseConnectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\AdvancedConnectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\AdvancedConnectDialog.Designer.cs">
+      <DependentUpon>AdvancedConnectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\AuthenticationDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\AuthenticationDlg.Designer.cs">
+      <DependentUpon>AuthenticationDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\CreateCertificateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\CreateCertificateDialog.Designer.cs">
+      <DependentUpon>CreateCertificateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\EndpointUpdateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\EndpointUpdateDialog.Designer.cs">
+      <DependentUpon>EndpointUpdateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\InsecureCredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\InsecureCredentialsDialog.Designer.cs">
+      <DependentUpon>InsecureCredentialsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\SimpleConnectDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\SimpleConnectDlg.Designer.cs">
+      <DependentUpon>SimpleConnectDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\TrustCertificateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\TrustCertificateDialog.Designer.cs">
+      <DependentUpon>TrustCertificateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\HistoryReadEventsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History\HistoryReadEventsDlg.Designer.cs">
+      <DependentUpon>HistoryReadEventsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeManagement\AddNodesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NodeManagement\AddNodesDlg.Designer.cs">
+      <DependentUpon>AddNodesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeManagement\AddReferencesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NodeManagement\AddReferencesDlg.Designer.cs">
+      <DependentUpon>AddReferencesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\TranslateBrowsePathsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\TranslateBrowsePathsDlg.Designer.cs">
+      <DependentUpon>TranslateBrowsePathsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\BrowseDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\BrowseDlg.Designer.cs">
+      <DependentUpon>BrowseDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ConnectOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ConnectOptionsControl.Designer.cs">
+      <DependentUpon>ConnectOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SessionOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\SessionOptionsControl.Designer.cs">
+      <DependentUpon>SessionOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\GetEndpointsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\GetEndpointsDlg.Designer.cs">
+      <DependentUpon>GetEndpointsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\FindServersDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect\FindServersDlg.Designer.cs">
+      <DependentUpon>FindServersDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SubscriptionOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\SubscriptionOptionsControl.Designer.cs">
+      <DependentUpon>SubscriptionOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeManagement\DeleteReferencesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NodeManagement\DeleteReferencesDlg.Designer.cs">
+      <DependentUpon>DeleteReferencesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeManagement\DeleteNodesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NodeManagement\DeleteNodesDlg.Designer.cs">
+      <DependentUpon>DeleteNodesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Read\ReadStructureDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Read\ReadStructureDlg.Designer.cs">
+      <DependentUpon>ReadStructureDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Read\ReadStructureDlg.DataTypeDefinitionManager.cs" />
+    <Compile Include="Read\ShowStructuredValue2TreeViewCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Read\ShowStructuredValue2TreeViewCtrl.Designer.cs">
+      <DependentUpon>ShowStructuredValue2TreeViewCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterNodes\RegisterNodesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterNodes\RegisterNodesDlg.Designer.cs">
+      <DependentUpon>RegisterNodesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\MonitorConditionsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\MonitorConditionsDlg.Designer.cs">
+      <DependentUpon>MonitorConditionsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\ModifyEventMonitoredItemsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\ModifyEventMonitoredItemsDlg.Designer.cs">
+      <DependentUpon>ModifyEventMonitoredItemsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\CreateEventMonitoredItemsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\CreateEventMonitoredItemsDlg.Designer.cs">
+      <DependentUpon>CreateEventMonitoredItemsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\HistoryReadProcessedDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History\HistoryReadProcessedDlg.Designer.cs">
+      <DependentUpon>HistoryReadProcessedDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\SetMonitoringModeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\SetMonitoringModeDlg.Designer.cs">
+      <DependentUpon>SetMonitoringModeDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\DeleteMonitoredItemsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\DeleteMonitoredItemsDlg.Designer.cs">
+      <DependentUpon>DeleteMonitoredItemsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\ModifyDataMonitoredItemsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\ModifyDataMonitoredItemsDlg.Designer.cs">
+      <DependentUpon>ModifyDataMonitoredItemsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\HistoryReadRawDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History\HistoryReadRawDlg.Designer.cs">
+      <DependentUpon>HistoryReadRawDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods\CallMethodDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Methods\CallMethodDlg.Designer.cs">
+      <DependentUpon>CallMethodDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Read\BasicReadDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Read\BasicReadDlg.Designer.cs">
+      <DependentUpon>BasicReadDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\CreateDataMonitoredItemsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\CreateDataMonitoredItemsDlg.Designer.cs">
+      <DependentUpon>CreateDataMonitoredItemsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\DeleteSubscriptionDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\DeleteSubscriptionDlg.Designer.cs">
+      <DependentUpon>DeleteSubscriptionDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\ModifySubscriptionDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\ModifySubscriptionDlg.Designer.cs">
+      <DependentUpon>ModifySubscriptionDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\CreateSubscriptionDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\CreateSubscriptionDlg.Designer.cs">
+      <DependentUpon>CreateSubscriptionDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription\SubscribeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription\SubscribeDlg.Designer.cs">
+      <DependentUpon>SubscribeDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Write\BasicWriteDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Write\BasicWriteDlg.Designer.cs">
+      <DependentUpon>BasicWriteDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Read\ReadWithDataEncodingDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Read\ReadWithDataEncodingDlg.Designer.cs">
+      <DependentUpon>ReadWithDataEncodingDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Read\ReadWithIndexRangeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Read\ReadWithIndexRangeDlg.Designer.cs">
+      <DependentUpon>ReadWithIndexRangeDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\ReverseConnectDialog.resx">
+      <DependentUpon>ReverseConnectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\AdvancedConnectDialog.resx">
+      <DependentUpon>AdvancedConnectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\AuthenticationDlg.resx">
+      <DependentUpon>AuthenticationDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\CreateCertificateDialog.resx">
+      <DependentUpon>CreateCertificateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\EndpointUpdateDialog.resx">
+      <DependentUpon>EndpointUpdateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\InsecureCredentialsDialog.resx">
+      <DependentUpon>InsecureCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\SimpleConnectDlg.resx">
+      <DependentUpon>SimpleConnectDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\TrustCertificateDialog.resx">
+      <DependentUpon>TrustCertificateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History\HistoryReadEventsDlg.resx">
+      <DependentUpon>HistoryReadEventsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeManagement\AddNodesDlg.resx">
+      <DependentUpon>AddNodesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeManagement\AddReferencesDlg.resx">
+      <DependentUpon>AddReferencesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\TranslateBrowsePathsDlg.resx">
+      <DependentUpon>TranslateBrowsePathsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\BrowseDlg.resx">
+      <DependentUpon>BrowseDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ConnectOptionsControl.resx">
+      <DependentUpon>ConnectOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SessionOptionsControl.resx">
+      <DependentUpon>SessionOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\GetEndpointsDlg.resx">
+      <DependentUpon>GetEndpointsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect\FindServersDlg.resx">
+      <DependentUpon>FindServersDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SubscriptionOptionsControl.resx">
+      <DependentUpon>SubscriptionOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeManagement\DeleteReferencesDlg.resx">
+      <DependentUpon>DeleteReferencesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeManagement\DeleteNodesDlg.resx">
+      <DependentUpon>DeleteNodesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Read\ReadStructureDlg.resx">
+      <DependentUpon>ReadStructureDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Read\ShowStructuredValue2TreeViewCtrl.resx">
+      <DependentUpon>ShowStructuredValue2TreeViewCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterNodes\RegisterNodesDlg.resx">
+      <DependentUpon>RegisterNodesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\MonitorConditionsDlg.resx">
+      <DependentUpon>MonitorConditionsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\ModifyEventMonitoredItemsDlg.resx">
+      <DependentUpon>ModifyEventMonitoredItemsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\CreateEventMonitoredItemsDlg.resx">
+      <DependentUpon>CreateEventMonitoredItemsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History\HistoryReadProcessedDlg.resx">
+      <DependentUpon>HistoryReadProcessedDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\SetMonitoringModeDlg.resx">
+      <DependentUpon>SetMonitoringModeDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\DeleteMonitoredItemsDlg.resx">
+      <DependentUpon>DeleteMonitoredItemsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\ModifyDataMonitoredItemsDlg.resx">
+      <DependentUpon>ModifyDataMonitoredItemsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History\HistoryReadRawDlg.resx">
+      <DependentUpon>HistoryReadRawDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Methods\CallMethodDlg.resx">
+      <DependentUpon>CallMethodDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Read\BasicReadDlg.resx">
+      <DependentUpon>BasicReadDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\CreateDataMonitoredItemsDlg.resx">
+      <DependentUpon>CreateDataMonitoredItemsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\DeleteSubscriptionDlg.resx">
+      <DependentUpon>DeleteSubscriptionDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\ModifySubscriptionDlg.resx">
+      <DependentUpon>ModifySubscriptionDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\CreateSubscriptionDlg.resx">
+      <DependentUpon>CreateSubscriptionDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription\SubscribeDlg.resx">
+      <DependentUpon>SubscribeDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Write\BasicWriteDlg.resx">
+      <DependentUpon>BasicWriteDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Read\ReadWithDataEncodingDlg.resx">
+      <DependentUpon>ReadWithDataEncodingDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Read\ReadWithIndexRangeDlg.resx">
+      <DependentUpon>ReadWithIndexRangeDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Read\ReadAttributeDlg.resx">
+      <DependentUpon>ReadAttributeDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="App.config" />
+    <Content Include="app.ico" />
+    <Content Include="html\options.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\images\bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\images\connect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\images\default_server.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\images\header_inner_bg.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\images\header_inner_inner_bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\images\header_logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\images\session.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\images\subscription.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Instructions.xml" />
+    <EmbeddedResource Include="License\License.lic" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Read\ReadAttributeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Read\ReadAttributeDlg.Designer.cs">
+      <DependentUpon>ReadAttributeDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Trace.cs" />
+  </ItemGroup>
+
+</Project>

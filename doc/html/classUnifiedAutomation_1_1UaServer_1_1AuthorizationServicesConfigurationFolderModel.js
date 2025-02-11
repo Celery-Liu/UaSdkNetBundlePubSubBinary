@@ -1,0 +1,5 @@
+var classUnifiedAutomation_1_1UaServer_1_1AuthorizationServicesConfigurationFolderModel =
+[
+    [ "AuthorizationServicesConfigurationFolderModel", "classUnifiedAutomation_1_1UaServer_1_1AuthorizationServicesConfigurationFolderModel.html#accb437ef876bbd748181519fce8464e3", null ],
+    [ "AuthorizationServicesConfigurationFolderModel", "classUnifiedAutomation_1_1UaServer_1_1AuthorizationServicesConfigurationFolderModel.html#ad7e77d7c4d0fd1ef77db16baaf39919e", null ]
+];

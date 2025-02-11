@@ -1,0 +1,5 @@
+var classUnifiedAutomation_1_1UaServer_1_1EccBrainpoolP256r1ApplicationCertificateModel =
+[
+    [ "EccBrainpoolP256r1ApplicationCertificateModel", "classUnifiedAutomation_1_1UaServer_1_1EccBrainpoolP256r1ApplicationCertificateModel.html#adbf2761cd7e6e69ad1f2a7d5b47d9c2c", null ],
+    [ "EccBrainpoolP256r1ApplicationCertificateModel", "classUnifiedAutomation_1_1UaServer_1_1EccBrainpoolP256r1ApplicationCertificateModel.html#ae6142a8b87c56836b57ef8e5051e5c37", null ]
+];

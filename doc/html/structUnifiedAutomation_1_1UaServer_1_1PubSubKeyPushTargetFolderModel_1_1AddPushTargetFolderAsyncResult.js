@@ -1,0 +1,5 @@
+var structUnifiedAutomation_1_1UaServer_1_1PubSubKeyPushTargetFolderModel_1_1AddPushTargetFolderAsyncResult =
+[
+    [ "PushTargetFolderNodeId", "structUnifiedAutomation_1_1UaServer_1_1PubSubKeyPushTargetFolderModel_1_1AddPushTargetFolderAsyncResult.html#a2154f1ca6db1bff35c5be485323f2bb6", null ],
+    [ "StatusCode", "structUnifiedAutomation_1_1UaServer_1_1PubSubKeyPushTargetFolderModel_1_1AddPushTargetFolderAsyncResult.html#af6f6a730d0dd6b5592d7cfc1d2c7250a", null ]
+];

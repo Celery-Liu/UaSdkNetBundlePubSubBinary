@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <AssemblyName>BasicClient</AssemblyName>
+    <RootNamespace>UnifiedAutomation.Sample</RootNamespace>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+
+    <OutputType>WinExe</OutputType>
+    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <StartupObject>UnifiedAutomation.Sample.Program</StartupObject>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <FileAlignment>512</FileAlignment>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.Windows" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="License\License.lic" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,5 @@
+var classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsConnectionModel_1_1LiveValues__BaseObjectModel =
+[
+    [ "LiveValues_BaseObjectModel", "classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsConnectionModel_1_1LiveValues__BaseObjectModel.html#a1c9a729401816f6fcb76183c17eab875", null ],
+    [ "ResolvedAddress", "classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsConnectionModel_1_1LiveValues__BaseObjectModel.html#aa3da1a59bf89cefe520b95685b4f594c", null ]
+];

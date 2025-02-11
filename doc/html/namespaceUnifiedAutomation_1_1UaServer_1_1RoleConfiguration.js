@@ -1,0 +1,4 @@
+var namespaceUnifiedAutomation_1_1UaServer_1_1RoleConfiguration =
+[
+    [ "RoleConfigurationHandlerException", "classUnifiedAutomation_1_1UaServer_1_1RoleConfiguration_1_1RoleConfigurationHandlerException.html", "classUnifiedAutomation_1_1UaServer_1_1RoleConfiguration_1_1RoleConfigurationHandlerException" ]
+];

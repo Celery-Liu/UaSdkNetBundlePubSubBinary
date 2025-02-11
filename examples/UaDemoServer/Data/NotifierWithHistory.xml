@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EventHistory xmlns="http://mycompany.com/EventHistorySchema.xsd" xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd">
+
+  <NamespaceUri>http://www.unifiedautomation.com/DemoServer/</NamespaceUri>
+  <SelectClause DataTypeId="i=12">1:SomeData</SelectClause>
+
+  <Event
+    Time="10"
+    ReceiveTime="10"
+    EventId="SGVsbG8gd29ybGQ="
+    EventTypeId="i=2130"
+    Severity="500"
+    Message="Something strange happened.">
+    <Field><ua:String>data...</ua:String></Field>
+  </Event>
+
+  <Event
+    Time="20"
+    ReceiveTime="20"
+    EventId="R29vZGJ5ZSBXb3JsZA=="
+    EventTypeId="i=2130"
+    Severity="750"
+    Message="Something strange happened again.">
+    <Field><ua:String>data...</ua:String></Field>
+  </Event>
+
+  <Event
+    Time="30"
+    ReceiveTime="30"
+    EventId="SGVsbCBicmVha2luZyBsb29zZQ=="
+    EventTypeId="i=2130"
+    Severity="1000"
+    Message="Hell broke loose!">
+    <Field><ua:String>data...</ua:String></Field>
+  </Event>
+
+</EventHistory>

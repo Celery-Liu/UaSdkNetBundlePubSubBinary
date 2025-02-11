@@ -1,0 +1,28 @@
+var classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars =
+[
+    [ "Boolean", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a805815501bc8384783fd18a901a5cfca", null ],
+    [ "Byte", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a7d09e9094b13a4f3277b2bf78c4c8107", null ],
+    [ "ByteString", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a0967b4b11eddf2c9d2fdef43f88812c5", null ],
+    [ "DataValue", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a53982c98f470d6ef0926efe7a3ad53d8", null ],
+    [ "DateTime", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a8f06f033aa42f4331691d151a41d5b78", null ],
+    [ "DiagnosticInfo", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a19fb48b3c928d886c9381f66651b3696", null ],
+    [ "Double", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#ac73f1d8a0c414aaf08c91a3503e90510", null ],
+    [ "ExpandedNodeId", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#ac53526fce8c379d4f111ddd27e1804ac", null ],
+    [ "ExtensionObject", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#ab0dd418067a0f34ccd1ac175bef580b9", null ],
+    [ "Float", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a98e4c1e691391cb92b468f906f68e693", null ],
+    [ "Guid", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a368016964fa1588e06d4056ff2783430", null ],
+    [ "Int16", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#abe57223ff6d908391ed5d87cf239377a", null ],
+    [ "Int32", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#ac4bf9529ce8988fff5cce4898b258fd9", null ],
+    [ "Int64", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a6c20ab658c06173da7e7c45103f425b5", null ],
+    [ "LocalizedText", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#af2b348658397d2dd03e471d1dad28f7a", null ],
+    [ "NodeId", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#aa19c8149252c377fd0172711ab093b5a", null ],
+    [ "QualifiedName", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#af8bbe0865dd9e501a40d09fd44ea4ef0", null ],
+    [ "SByte", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a1298e3b7f252ff32f2aec6431c5c279e", null ],
+    [ "StatusCode", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a6d1eb5789d0653c8409ca6aaf1e8bb05", null ],
+    [ "String", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a4cc9defe4a5963cff3321953b19fc65d", null ],
+    [ "UInt16", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a88d97fb95a66bbf40919876e998c5785", null ],
+    [ "UInt32", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a067b953951d96f9887ebc12fcaaaa41a", null ],
+    [ "UInt64", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a52339accf6e1be02036c0f823d495534", null ],
+    [ "Variant", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#a5a51ec0c333e70ac8adf65c9e5873752", null ],
+    [ "XmlElement", "classUnifiedAutomation_1_1UaBase_1_1TypeInfo_1_1Scalars.html#acf6e2c159e4915955cb9b94cbbfab729", null ]
+];

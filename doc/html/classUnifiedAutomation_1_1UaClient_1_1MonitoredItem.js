@@ -1,0 +1,26 @@
+var classUnifiedAutomation_1_1UaClient_1_1MonitoredItem =
+[
+    [ "MonitoredItem", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a9a9fd2aa48b47b975066dd5eca98c3a5", null ],
+    [ "MonitoredItem", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a6b6ab160535a3668925e6bf18ce38ea7", null ],
+    [ "Load", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a4117b1a2380bc99c3cdc9059a2cc0745", null ],
+    [ "LoadAll", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#ae9ec29ae0ca09b7d893bff4a9fc9a5e0", null ],
+    [ "Save", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a65fa355f679c2af551d2cbd510921dfb", null ],
+    [ "SaveAll", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#aa2a893acd3d0be271f3f83652437a771", null ],
+    [ "AttributeId", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a02c647a0726f2a599b8a017e4ef468b8", null ],
+    [ "ClientHandle", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a8b31413033e2280f684ac478cc18968d", null ],
+    [ "CurrentDiscardOldest", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#aad135838119643de32975f5f2d169096", null ],
+    [ "CurrentMonitoringMode", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#aa82262999d41b5c1deedddd271654e7a", null ],
+    [ "CurrentQueueSize", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#abfcb8646fb01ae99312c99c8562ffb5c", null ],
+    [ "CurrentSamplingInterval", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#ad84e4dfd27f40c355069aa40d1327593", null ],
+    [ "DiscardOldest", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a4110a8cffaa1252f6d6261db922d1d4f", null ],
+    [ "LastError", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#ad8e42ab39a0c7dfce20855a655942ae3", null ],
+    [ "LastFilterError", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#ad957dc473a8ec791577b5ec62b4ea5f3", null ],
+    [ "MonitoringMode", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a3738dd5626ef6ccdcb4eb5e50d1e10a8", null ],
+    [ "NodeId", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a83a93cce992bfc6f146ac49f9f7f37e4", null ],
+    [ "QueueSize", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a2e9fe299272e4a0bf91db7f5c266472f", null ],
+    [ "SamplingInterval", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#aa7c2739d343510acc95b4baea82cf8d0", null ],
+    [ "ServerHandle", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#a07e9073339bcf002f40a4a5f09241769", null ],
+    [ "Subscription", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#aa5e79c4a039726fff3d0087ca0b53b59", null ],
+    [ "TimestampsToReturn", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#ab3ff38099075ca2427457436bde9d1eb", null ],
+    [ "UserData", "classUnifiedAutomation_1_1UaClient_1_1MonitoredItem.html#ae8270e1a1b9f0373e3704841bf7f030f", null ]
+];

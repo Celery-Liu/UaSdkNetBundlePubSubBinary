@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>ServerLesson08</AssemblyName>
+    <RootNamespace>YourCompany.GettingStarted</RootNamespace>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+
+    <OutputType>Exe</OutputType>
+    <OutputPath>..\..\..\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\..\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <FileAlignment>512</FileAlignment>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Common\Program.Configuration.cs;..\Common\ModelWithAlarms\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\Common\License\License.lic" />
+    <EmbeddedResource Include="..\Common\ModelWithAlarms\*.xml" />
+    <EmbeddedResource Include="System\SystemConfiguration.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.BouncyCastle" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaServer" Version="4.1.0" />
+  </ItemGroup>
+</Project>

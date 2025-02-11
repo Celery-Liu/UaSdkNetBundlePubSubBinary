@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://unifiedautomation.com/schemas/UserConfiguration.xsd">
+  <UserProfiles>
+    <User>
+      <Username>john</Username>
+      <Password>
+        <PasswordClearText>master</PasswordClearText>
+        <Algorithm>SHA512</Algorithm>
+      </Password>
+      <Description>User named john. Has the Operator role attached.</Description>
+    </User>
+    <User>
+      <Username>joe</Username>
+      <Password>
+        <PasswordClearText>god</PasswordClearText>
+        <Algorithm>SHA512</Algorithm>
+      </Password>
+      <Description>User named joe. Has the SecurityAdmin role attached.</Description>
+    </User>
+  </UserProfiles>
+</UserConfiguration>

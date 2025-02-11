@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RoleConfigurations"
+    targetNamespace="http://unifiedautomation.com/schemas/RoleConfigurations.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://unifiedautomation.com/schemas/RoleConfigurations.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:complexType name="RoleConfigurations">
+    <xs:sequence>
+      <!-- The NamespaceUris used in the RoleConfiguration. The NamespaceIndex of a NodeId of a Role refers to this NamespaceTable. -->
+      <xs:element name="NamespaceTable" type="NamespaceTable" />
+      <xs:element name="Roles" type="ListOfRoles" />
+    </xs:sequence>
+    <!-- If 'true', configuring the Roles with OPC UA Methods gets enabled in the server. -->
+    <xs:attribute name="EnableOnlineConfiguration" type="xs:boolean" default="false" />
+    <!-- The maximum number of roles. Is only evaluated when adding a role online. If 0 is specified, then there is no limitation. -->
+    <xs:attribute name="MaxRoles" type="xs:unsignedInt" default="100" />
+    <!-- The maximum number of identities per role. Is only evaluated when adding an identity online. If 0 is specified, then there is no limitation. -->
+    <xs:attribute name="MaxIdentitiesPerRole" type="xs:unsignedInt" default="1000" />
+    <!-- The maximum number of application to include or exclude per role. Is only evaluated when adding an application online. If 0 is specified, then there is no limitation. -->
+    <xs:attribute name="MaxApplicationsPerRole" type="xs:unsignedInt" default="100" />
+    <!-- The maximum number of endpoints per role. Is only evaluated when adding an endpoint online. If 0 is specified, then there is no limitation. -->
+    <xs:attribute name="MaxEndpointsPerRole" type="xs:unsignedInt" default="100" />
+  </xs:complexType>
+  <xs:element name="RoleConfigurations" type="RoleConfigurations" />
+
+  <xs:complexType name="NamespaceTable">
+    <xs:sequence>
+      <xs:element name="Uri" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ListOfRoles">
+    <xs:sequence>
+      <xs:element name="Role" type="RoleType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ListOfApplications">
+    <xs:sequence>
+      <xs:element name="ApplicationUri" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RoleType">
+    <xs:sequence>
+      <!-- The Endpoints to include or exclude. -->
+      <xs:element name="Endpoints" type="ListOfEndpoints" minOccurs="0" />
+      <!-- The Applications to include or exclude -->
+      <xs:element name="Applications" type="ListOfApplications" minOccurs="0" />
+      <!-- The Identities to include. If not set, all identities can be included, dependent on the Endpoints and Applications. If empty, the Role will be granted no user. -->
+      <xs:element name="Identities" type="ListOfIdentities" minOccurs="0" />
+    </xs:sequence>
+    <!-- The name of the Role -->
+    <xs:attribute name="Name" type="xs:string" use="required" />
+    <!-- The NodeId of the Role node -->
+    <xs:attribute name="NodeId" type="NodeId" use="required" />
+    <!-- If true node permission checks are skipped for users possesing this role. Should only enabled for debugging and is not recommended for production use. -->
+    <xs:attribute name="IgnorePermissions" type="xs:boolean" default="false" />
+    <!-- Sets the Value of the CustomConfiguration property --> 
+    <xs:attribute name="CustomConfiguration" type="xs:boolean" default="false" />
+    <!-- Specifies if Endpoints are included, excluded or ignored. Ignore will set the Value of EndpointsExclude property to 'true'. -->
+    <xs:attribute name="EndpointsMode" type="Mode" default="Ignore" />
+    <!-- Specifies if Applications are included, excluded or ignored. Ignore will set the Value of ApplicationsExclude property to 'true'. -->
+    <xs:attribute name="ApplicationsMode" type="Mode" default="Ignore" />
+    <!-- Specifies if this role can be configured online. Is only evaluated if RoleConfigurations.EnableOnlineConfiguration is 'true'. -->
+    <xs:attribute name="DisableOnlineConfiguration" type="xs:boolean" default="false" />
+  </xs:complexType>
+
+  <!-- The NodeId in the XML representation defined in part 6 of the OPC UA specification. -->
+  <xs:simpleType name="NodeId">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="Mode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ignore" />
+      <xs:enumeration value="Exclude" />
+      <xs:enumeration value="Include" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ListOfEndpoints">
+    <xs:sequence>
+      <xs:element name="Endpoint" type="EndpointType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EndpointType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <!-- The security mode to match. If Invalid, this check will be skipped. -->
+        <xs:attribute name="SecurityMode" type="SecurityMode" default="Invalid" />
+        <!-- The security policy uri to match. If not set, this check will be skipped. -->
+        <xs:attribute name="SecurityPolicyUri" type="xs:string" use="optional" />
+        <!-- The transport profile uri to match. If not set, this check will be skipped.
+             The only meaningful value is http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary. -->
+        <xs:attribute name="TransportProfileUri" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="SecurityMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invalid" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Sign" />
+      <xs:enumeration value="SignAndEncrypt" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ListOfIdentities">
+    <xs:sequence>
+      <xs:element name="Identity" type="IdentityType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="IdentityType">
+    <xs:simpleContent>
+      <!-- Depending on the CriteriaType, the Value of this tag shall be empty or set. Anonymous and AuthenticatedUser shall not have a Value. Other CiteriaTypes require a Value. -->
+      <xs:extension base="xs:string">
+        <xs:attribute name="CriteriaType" type="CriteriaType" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="CriteriaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UserName" />           <!-- The rule specifies a UserName from a UserNameIdentityToken. -->
+      <xs:enumeration value="Thumbprint" />         <!-- The rule specifies the Thumbprint of a user or CA Certificate. -->
+      <xs:enumeration value="Role" />               <!-- The rule is a Role specified in an Access Token. -->
+      <xs:enumeration value="GroupId" />            <!-- The rule is a user group specified in the Access Token. -->
+      <xs:enumeration value="Anonymous" />          <!-- The rule specifies Anonymous UserIdentityToken. -->
+      <xs:enumeration value="AuthenticatedUser" />  <!-- The rule specifies any non Anonymous UserIdentityToken. -->
+      <xs:enumeration value="Application" />        <!-- The rule specifies the combination of an application identity and an Anonymous UserIdentityToken. -->
+      <xs:enumeration value="X509Subject" />        <!-- The rule specifies the X509 subject name of a user or CA Certificate. -->
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

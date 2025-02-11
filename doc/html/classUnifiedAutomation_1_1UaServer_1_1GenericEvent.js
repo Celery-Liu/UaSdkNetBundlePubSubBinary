@@ -1,0 +1,28 @@
+var classUnifiedAutomation_1_1UaServer_1_1GenericEvent =
+[
+    [ "GenericEvent", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a930034d0a79b4f217795fdd5f624b9d5", null ],
+    [ "Get", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a70d9b0328ff4145fc419059e3655de27", null ],
+    [ "Get", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a2a62fa81179662c22ed5c1ef30fbc8d5", null ],
+    [ "Get", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a71f372da0539bbd250ea04a01c8bcc41", null ],
+    [ "Get", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a6cf336ca5bd24eb459a8272c679be8bc", null ],
+    [ "Get", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a7abaf2fa060c80456a4a1cc1d834703a", null ],
+    [ "Initialize", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#ab63c82ed60c31544e554a93a72adea98", null ],
+    [ "Initialize", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#aabf3813bfa594831f76616110de381e7", null ],
+    [ "Set", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#ad95fbca3668e960fa5a2ce0b139371aa", null ],
+    [ "Set", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a924646609d91326fc90052a5d8615b2e", null ],
+    [ "Set", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a8e183548d39d74d5a538f2824cabb350", null ],
+    [ "Set", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a158f8bbd73d3dfe8785f3d33b3e7ebab", null ],
+    [ "SetRolePermissions", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#ad47c5bb267d61a11a315a7e669e1105f", null ],
+    [ "SetRolePermissionsAndAccessRestriction", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a7e5b72bef7da825ec976ee227fbfdf52", null ],
+    [ "ToPath", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a240848e3b55e5f40016769278def6ec1", null ],
+    [ "ToPath", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a1f3837fc30833301283b67bde7ffc075", null ],
+    [ "ToPath", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a14ca6ca354edd2c70645f264551b98be", null ],
+    [ "AccessRestriction", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a3188944b61e067d8122c603ce93ef340", null ],
+    [ "EventId", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a51aedf3f7a36e221789ab6606fbe2586", null ],
+    [ "EventType", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a4bfb9bbc626926698bbfb0d0c691cbbb", null ],
+    [ "Manager", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a5707906b6b9536fa1666d63bbb19c2c1", null ],
+    [ "NodeAccessInfo", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a0a40eb268d715d9c8ca75970902fc5a1", null ],
+    [ "RolePermissions", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#afa2fb5d2883734c39f3abd5f2527c28c", null ],
+    [ "SourceNode", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#a05dc96b7a85cce980ac3dd252883129d", null ],
+    [ "Time", "classUnifiedAutomation_1_1UaServer_1_1GenericEvent.html#aa0e9e586f571213ad4dce991b8c4cd3d", null ]
+];

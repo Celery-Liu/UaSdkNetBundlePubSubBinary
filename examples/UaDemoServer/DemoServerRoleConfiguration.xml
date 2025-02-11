@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<RoleConfigurations EnableOnlineConfiguration="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://unifiedautomation.com/schemas/RoleConfigurations.xsd">
+  <NamespaceTable>
+    <Uri>http://opcfoundation.org/UA/</Uri>
+  </NamespaceTable>
+  <Roles>
+    <Role Name="Engineer" NodeId="i=16036">
+      <Identities>
+        <Identity CriteriaType="UserName">john</Identity>
+        <Identity CriteriaType="UserName">root</Identity>
+      </Identities>
+    </Role>
+    <Role Name="ConfigureAdmin" NodeId="i=15716">
+      <Identities>
+        <Identity CriteriaType="UserName">john</Identity>
+      </Identities>
+    </Role>
+    <Role Name="Operator" NodeId="i=15680">
+      <Identities>
+        <Identity CriteriaType="AuthenticatedUser" />
+      </Identities>
+    </Role>
+    <Role Name="SecurityAdmin" NodeId="i=15704">
+      <Identities>
+        <Identity CriteriaType="UserName">root</Identity>
+      </Identities>
+    </Role>
+    <Role Name="SecurityKeyServerAdmin" NodeId="i=25565">
+      <Identities>
+        <Identity CriteriaType="UserName">john</Identity>
+      </Identities>
+    </Role>
+    <Role Name="SecurityKeyServerAccess" NodeId="i=25603">
+      <Identities>
+        <Identity CriteriaType="UserName">john</Identity>
+      </Identities>
+    </Role>
+  </Roles>
+</RoleConfigurations>

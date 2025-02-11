@@ -1,0 +1,27 @@
+var classUnifiedAutomation_1_1UaBase_1_1VariableNode =
+[
+    [ "VariableNode", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a272fe0d3a610a85ec36fad030953cea8", null ],
+    [ "ClearAccessLevelEx", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a5ad7518c96de8effd2fd504013867822", null ],
+    [ "Clone", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a673d385dc7133e0aaa2707791e654218", null ],
+    [ "Decode", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a03f070ae98d99ef52af795a5af5ad67d", null ],
+    [ "Encode", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#ac54cadb43a591a1639d02fd8faa98d08", null ],
+    [ "GetAttributes", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a5f13b34757ae394d7ce70d5fb5ebf223", null ],
+    [ "HasAttribute", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#ac84388046e1ed1ab2509089983025031", null ],
+    [ "IsEqual", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a9d9c596beb05b740614be004fa32ee1d", null ],
+    [ "Read", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a007b3859c51ef190317048eb0194a737", null ],
+    [ "Write", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a0e5d1012685013603828f6def7d245c3", null ],
+    [ "AccessLevel", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a037554d5695f69b0ab6c934571ef42f4", null ],
+    [ "AccessLevelEx", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#ad0d7d11ec2de95ebcad32265539ea48c", null ],
+    [ "ArrayDimensions", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#ad6e5e4e95780f328450f5c33ddfd32b7", null ],
+    [ "BinaryEncodingId", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#ac3e3bfdf47ac9ac681d5f2da7388b301", null ],
+    [ "DataType", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a8519286d20dc8d8416089ac6a52db490", null ],
+    [ "Historizing", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a2ffd28f67e3c3f7f0a9b8c166d62bf1f", null ],
+    [ "MinimumSamplingInterval", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#ad9d344f6e24e93987fb0c89dd7e512c0", null ],
+    [ "StatusCode", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a43d0391c5ca16ef90fe7333832e4e4dc", null ],
+    [ "Timestamp", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#acf0aa2f238bb35371ef3aa71bf5f054f", null ],
+    [ "TypeId", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#acf20e1f5f1f8f51b3cb086a135e66903", null ],
+    [ "UserAccessLevel", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#acde7643b0bd2241b9b5317ec3108a820", null ],
+    [ "Value", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a5277ab45c9169bee42dba8ac2e0d50fa", null ],
+    [ "ValueRank", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a1ed46b0c6a3864058acc40479683fe7c", null ],
+    [ "XmlEncodingId", "classUnifiedAutomation_1_1UaBase_1_1VariableNode.html#a0aa5ce6ed125aa88cdd3df0c43f75daf", null ]
+];

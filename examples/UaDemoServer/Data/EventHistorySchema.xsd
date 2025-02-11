@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EventHistorySchema"
+    targetNamespace="http://mycompany.com/EventHistorySchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://mycompany.com/EventHistorySchema.xsd"
+    xmlns:mstns="http://mycompany.com/EventHistorySchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:complexType name="EventInstance">
+    <xs:sequence>
+      <xs:element name="Field" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Time" type="xs:unsignedInt" use="required"></xs:attribute>
+    <xs:attribute name="ReceiveTime" type="xs:unsignedInt" default="0"></xs:attribute>
+    <xs:attribute name="EventId" type="xs:base64Binary" use="required"></xs:attribute>
+    <xs:attribute name="EventTypeId" type="xs:string" default="i=2041"></xs:attribute>
+    <xs:attribute name="SourceName" type="xs:string" default="Server"></xs:attribute>
+    <xs:attribute name="SourceNode" type="xs:string" default="i=2253"></xs:attribute>
+    <xs:attribute name="Severity" type="xs:unsignedInt" default="500"></xs:attribute>
+    <xs:attribute name="Message" type="xs:string" use="required"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="SelectClauseType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="EventTypeId" type="xs:string" default="i=2041"></xs:attribute>
+        <xs:attribute name="DataTypeId" type="xs:string" default="i=24"></xs:attribute>
+        <xs:attribute name="ValueRank" type="xs:int" default="-1"></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="EventHistoryType">
+    <xs:sequence>
+      <xs:element name="NamespaceUri" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      <xs:element name="SelectClause" type="SelectClauseType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      <xs:element name="Event" type="EventInstance" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="EventHistory" type="EventHistoryType"></xs:element>
+
+</xs:schema>

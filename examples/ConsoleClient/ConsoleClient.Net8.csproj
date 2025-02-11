@@ -1,0 +1,85 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0; net8.0-windows</TargetFrameworks>
+    <AssemblyName>ConsoleClient</AssemblyName>
+    <RootNamespace>ConsoleClient</RootNamespace>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+
+    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <StartupObject>ConsoleClient.Program</StartupObject>
+    <FileAlignment>512</FileAlignment>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
+    <OutputType>Exe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.BouncyCastle" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.Windows" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Client.Browse.cs" />
+    <Compile Include="Client.DataTypeDefinitionManager.cs" />
+    <Compile Include="Client.Discovery.cs" />
+    <Compile Include="Client.Connection.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Client.DataAccess.cs" />
+    <Compile Include="Client.History.cs" />
+    <Compile Include="Client.Menu.cs" />
+    <Compile Include="Client.Method.cs" />
+    <Compile Include="Client.RegisterNode.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="License\License.lic" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.Subscription.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="defaultconfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NuGet.Config" />
+  </ItemGroup>
+</Project>

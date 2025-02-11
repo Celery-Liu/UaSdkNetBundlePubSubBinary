@@ -1,0 +1,25 @@
+var classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel =
+[
+    [ "CreateSigningRequestAsyncResult", "structUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel_1_1CreateSigningRequestAsyncResult.html", "structUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel_1_1CreateSigningRequestAsyncResult" ],
+    [ "GetCertificatesAsyncResult", "structUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel_1_1GetCertificatesAsyncResult.html", "structUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel_1_1GetCertificatesAsyncResult" ],
+    [ "GetRejectedListAsyncResult", "structUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel_1_1GetRejectedListAsyncResult.html", "structUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel_1_1GetRejectedListAsyncResult" ],
+    [ "UpdateCertificateAsyncResult", "structUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel_1_1UpdateCertificateAsyncResult.html", "structUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel_1_1UpdateCertificateAsyncResult" ],
+    [ "ServerConfigurationModel", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a45e12d6b31840f2e24937f0d04127bce", null ],
+    [ "ServerConfigurationModel", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a3f75f96a6f4f0694ac0674924bba09a0", null ],
+    [ "DispatchMethod", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a4e5eeb11b34017558cf49fbc8ea0a1f6", null ],
+    [ "DispatchMethodAsync", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a9967f52f89c822e1f4e58910fc82bea6", null ],
+    [ "GetAsyncMethodDispatcher", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#abb7b40d055397358a82842c96099be2a", null ],
+    [ "GetMethodDispatcher", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a6828b495b0b1c3c73505b7aa077483e4", null ],
+    [ "ApplicationType", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a5d5eedf294e2c3822e44f1943c5539e8", null ],
+    [ "ApplicationUri", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#ad20049e703e1ef8f587763f237e27f63", null ],
+    [ "CertificateGroups", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a7c95599286162b06a5d406e6779aec10", null ],
+    [ "HasSecureElement", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a0b47e34f9d9218b2dc178fb76691309f", null ],
+    [ "MaxTrustListSize", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a4e0d8eb339f4ead8ecff93c6107ecb40", null ],
+    [ "MulticastDnsEnabled", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#ae54d044752f11814272ea67b324c7288", null ],
+    [ "ProductUri", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a749a33f2734ae8720286293458e582f9", null ],
+    [ "ServerCapabilities", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#ab40facaf70ddd7bc25be9f5c9dfa3dbe", null ],
+    [ "ServerConfigurationAsyncMethods", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#a38099f22b0b189898fbb06371a9d43f6", null ],
+    [ "ServerConfigurationMethods", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#ababe4c35a2df325755db0d3c574457ae", null ],
+    [ "SupportedPrivateKeyFormats", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#ab689abf473ed98d4c0eeefdb19962e8c", null ],
+    [ "TransactionDiagnostics", "classUnifiedAutomation_1_1UaServer_1_1ServerConfigurationModel.html#af7541713596e8178cdf5949bbb2344f1", null ]
+];

@@ -1,0 +1,27 @@
+var classUnifiedAutomation_1_1UaServer_1_1RequestContext =
+[
+    [ "RequestContext", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#ab1b51251be4d9bcf24715ead143029fe", null ],
+    [ "RequestContext", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a20753b4fcfb316ac8290a87200bce714", null ],
+    [ "RequestContext", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a6b7d27255aa6e8b89c2a2ac947395a66", null ],
+    [ "IsOperationAborted", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#af205861baa5fbde8a72713810e7b0753", null ],
+    [ "CancellationToken", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a12b341074d97f9c426d8702254bd15ac", null ],
+    [ "AuditEntryId", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#adc84e0804e64040aa2103637eda7025b", null ],
+    [ "ChannelContext", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#ae6e17b7c80ba3cf66be7999b41eecb01", null ],
+    [ "ClientHandle", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a0c274fa4d822145ce7f4c1875febfc2d", null ],
+    [ "DiagnosticsMasks", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a143659d8cc8885f049f001331c262ab4", null ],
+    [ "DiagnosticsStrings", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#ad229dc1267a28789c64a7d28b4d800fa", null ],
+    [ "Incoming", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#ab0303047f385f680bcea2254a3435d6d", null ],
+    [ "IsDefaultServerContext", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a22284bd837680b819cd908f6e761265d", null ],
+    [ "OperationDeadline", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a6cbcf4426cf7d1fb30617b59c2ab071c", null ],
+    [ "OperationStatus", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a43335020038ef20de4a687006d086cf3", null ],
+    [ "PreferredLocales", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a5f7aefdd60c3505d37162c894ee19184", null ],
+    [ "RequestType", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#afda05d3a167fd67a7b910e07ce5230ea", null ],
+    [ "RoleIds", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a32e1378ec8f4124380f00f76293a964d", null ],
+    [ "ScopeIds", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a875ebadfc5dd8b76c1e3c10ab442e8fa", null ],
+    [ "SecurityMode", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a07af5f55628b8ec29955cfc980fa0868", null ],
+    [ "SecurityPolicyUri", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#acfeda3c31c96d94bedd714f92de917ff", null ],
+    [ "Session", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a01a93758e7da7b1a9bf5b92fd354edd7", null ],
+    [ "SessionId", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a8c9d979703ad204a7fd9593a62ffc9b3", null ],
+    [ "UserData", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#affc9cd797f1a70b6e04ea52e97676bf9", null ],
+    [ "UserIdentity", "classUnifiedAutomation_1_1UaServer_1_1RequestContext.html#a0f77a05a2506f379c80abca638e6be03", null ]
+];

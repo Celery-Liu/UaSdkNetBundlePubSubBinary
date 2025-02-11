@@ -1,0 +1,5 @@
+var structUnifiedAutomation_1_1UaServer_1_1SubscribedDataSetFolderModel_1_1AddSubscribedDataSetAsyncResult =
+[
+    [ "StatusCode", "structUnifiedAutomation_1_1UaServer_1_1SubscribedDataSetFolderModel_1_1AddSubscribedDataSetAsyncResult.html#a40e7377f0a8fe2ca2f11f0a1ebbaabf4", null ],
+    [ "SubscribedDataSetNodeId", "structUnifiedAutomation_1_1UaServer_1_1SubscribedDataSetFolderModel_1_1AddSubscribedDataSetAsyncResult.html#ab6855e4a784dd32a97029ff93021824f", null ]
+];

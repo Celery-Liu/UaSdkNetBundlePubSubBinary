@@ -1,0 +1,28 @@
+var classUnifiedAutomation_1_1UaServer_1_1ServerModel =
+[
+    [ "GetMonitoredItemsAsyncResult", "structUnifiedAutomation_1_1UaServer_1_1ServerModel_1_1GetMonitoredItemsAsyncResult.html", "structUnifiedAutomation_1_1UaServer_1_1ServerModel_1_1GetMonitoredItemsAsyncResult" ],
+    [ "SetSubscriptionDurableAsyncResult", "structUnifiedAutomation_1_1UaServer_1_1ServerModel_1_1SetSubscriptionDurableAsyncResult.html", "structUnifiedAutomation_1_1UaServer_1_1ServerModel_1_1SetSubscriptionDurableAsyncResult" ],
+    [ "ServerModel", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a3ada1495e233b2923654e667da3ea3ba", null ],
+    [ "ServerModel", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a30bf5d6a308c3e494f768051f1aa7dee", null ],
+    [ "ServerModel", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#ac2cb6a1a002d9d3f29b12c7eb3c8e795", null ],
+    [ "DispatchMethod", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a34747c366343a54551e012e9921a922b", null ],
+    [ "DispatchMethodAsync", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a06f9fe376cb917cc33127caab320b145", null ],
+    [ "GetAsyncMethodDispatcher", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a777522bb0abb4c131868454941d8cdd0", null ],
+    [ "GetMethodDispatcher", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a0189fe20ce77a2395be9007e25338106", null ],
+    [ "GetModelHandle", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#af42d988a6531a598ce7f3d54ebb93ac5", null ],
+    [ "Auditing", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#afff17d04959c6fe8f1f2425262fedf9b", null ],
+    [ "EstimatedReturnTime", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a543ad63d008b8e362b858cf5d0df749a", null ],
+    [ "LocalTime", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#ab73f91d321899d0795fac1de5b26f119", null ],
+    [ "NamespaceArray", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#ae5ea65633db910c908ff958bb17dc55a", null ],
+    [ "Namespaces", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a80e80621fa0723fcb31faed474ecfe7a", null ],
+    [ "ServerArray", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a337e1de55942e53b26528f7558da5faf", null ],
+    [ "ServerAsyncMethods", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#ab30f628eb493968e087c4d865a2728c9", null ],
+    [ "ServerCapabilities", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a0cf1f4df7ecfadd90ec673f0119bfe81", null ],
+    [ "ServerDiagnostics", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a84c4cd3d91b9e860591e8a3cf6a7b5af", null ],
+    [ "ServerMethods", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a7234e4ad9edf68d7141dc802a4655a53", null ],
+    [ "ServerRedundancy", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a3abdbd1eb8f9a7abf3ae64f585fe182e", null ],
+    [ "ServerStatus", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a34c1ed507dea1cd98218a7d582e0d132", null ],
+    [ "ServiceLevel", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a875d181f74ac371d0eb85bddf274b723", null ],
+    [ "UrisVersion", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#abf3c47c91855d9c69c8f07b179693237", null ],
+    [ "VendorServerInfo", "classUnifiedAutomation_1_1UaServer_1_1ServerModel.html#a189fadb689a852b5938c70726dbe5474", null ]
+];

@@ -1,0 +1,144 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <AssemblyName>FullClient</AssemblyName>
+    <RootNamespace>UnifiedAutomation.Sample</RootNamespace>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+
+    <OutputType>WinExe</OutputType>
+    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <StartupObject>UnifiedAutomation.Sample.Program</StartupObject>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <FileAlignment>512</FileAlignment>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+	<GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnifiedAutomation.UaBase" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaBase.Windows" Version="4.1.0" />
+    <PackageReference Include="UnifiedAutomation.UaClient" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="AttributeListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AttributeListControl.Designer.cs">
+      <DependentUpon>AttributeListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndpointWrapper.cs" />
+    <Compile Include="Forms\AddUserIdentityDialog.cs" />
+    <Compile Include="Forms\AddUserIdentityDialog.Designer.cs" />
+    <Compile Include="Forms\TrustCertificateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrustCertificateDialog.Designer.cs">
+      <DependentUpon>TrustCertificateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoredItemsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MonitoredItemsControl.Designer.cs">
+      <DependentUpon>MonitoredItemsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AttributeListControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AttributeListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddUserIdentityDialog.resx" />
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitoredItemsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MonitoredItemsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriteValuesDialog.resx">
+      <DependentUpon>WriteValuesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <EmbeddedResource Include="License\License.lic" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="BrowseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrowseControl.Designer.cs">
+      <DependentUpon>BrowseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublishingIntervalDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublishingIntervalDialog.Designer.cs">
+      <DependentUpon>PublishingIntervalDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WriteValuesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WriteValuesDialog.Designer.cs">
+      <DependentUpon>WriteValuesDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\TrustCertificateDialog.resx">
+      <DependentUpon>TrustCertificateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PublishingIntervalDialog.resx">
+      <DependentUpon>PublishingIntervalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+  </ItemGroup>
+
+</Project>

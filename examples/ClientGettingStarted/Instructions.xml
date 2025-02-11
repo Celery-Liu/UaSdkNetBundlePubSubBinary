@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListOfDialogs>
+
+  <Dialog Name="CreateCertificateDialog">
+    <FilePath>Connect\CreateCertificateDialog.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample3.html</HelpFilePath>
+    <Instructions>
+      This dialog specifies the parameters for a new certificate.
+      This must be done once the first time the application runs.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="TrustCertificateDialog">
+    <FilePath>Connect\TrustCertificateDialog.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample4.html</HelpFilePath>
+    <Instructions>
+      This dialog displays an untrusted server certificate.
+      It is possible to accept the certificate temporarily or permanently.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="BrowseDlg">
+    <FilePath>Browse\BrowseDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample12.html</HelpFilePath>
+    <Instructions>
+      The Browse service reads the references from a node.
+      The parameters in the request are used to filter the references returned.
+      The response is a list of references.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="TranslateBrowsePathsDlg">
+    <FilePath>Browse\TranslateBrowsePathsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample13.html</HelpFilePath>
+    <Instructions>
+      The TranslateBrowsePaths service finds the Nodes at the end of a BrowsePath.
+      The request specifies a starting Node and a path to follow.
+      The response is a NodeId for each path.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="FindServersDlg">
+    <FilePath>Connect\FindServersDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample1.html</HelpFilePath>
+    <Instructions>
+      The FindServers service finds the Servers known to the LDS on a host.
+      The request specifies a host name.
+      The response is a list of Servers on that host.
+      This test requires a running LDS with at least one registered server.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="GetEndpointsDlg">
+    <FilePath>Connect\GetEndpointsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample2.html</HelpFilePath>
+    <Instructions>
+      The GetEndpoints service finds the Endpoints supported by a Server.
+      The request specifies an Endpoint of the Server to query.
+      The response is a list of Endpoint supported by the Server.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="SimpleConnectDlg">
+    <FilePath>Connect\SimpleConnectDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample5.html</HelpFilePath>
+    <Instructions>
+      The simple Connect method connects the client to a server that is specified by the
+      EndpointUrl and the SecuritySelection. UseDnsNameAndPortFromDicoveryUrl
+      replaces the url of the Endpoint by the EndpointUrl argument.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="AdvancedConnectDialog">
+    <FilePath>Connect\AdvancedConnectDialog.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample26.html</HelpFilePath>
+    <Instructions>
+      The advanced Connect method connects the client to a server that is specified by an
+      Endpoint. To select the Endpoint you have to call GetEndpoints before.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="AuthenticationDlg">
+    <FilePath>Connect\AuthenticationDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample27.html</HelpFilePath>
+    <Instructions>
+      This dialog shows how to connect to a server using different user identity tokens.
+      The X509 (Dir) option uses an X509 certificate in pfx format. The X509 (Win) option
+      uses a certificate from a Windows store.
+      The trust list of the .NET DemoServer must contain the used certifcate.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="ReverseConnectDialog">
+    <FilePath>Connect\ReverseConnectDialog.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample29.html</HelpFilePath>
+    <Instructions>
+      The Reverse Connect method connects the client to a server, using a channel that is initialized by the the server.
+      Make sure Reverse Connect is configured in your server.
+    </Instructions>
+  </Dialog>
+
+  <Dialog Name="HistoryReadProcessedDlg">
+    <FilePath>History\HistoryReadProcessedDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample15.html</HelpFilePath>
+    <Instructions>
+      The HistoryRead service reads the historical data for a Variable.
+      The request specifies a time range, a processing interval and an aggregate calculation.
+      The response is a list of aggregate values calculated from the history for the Variable.
+    </Instructions>
+  </Dialog>
+
+  <Dialog Name="HistoryReadRawDlg">
+    <FilePath>History\HistoryReadRawDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample14.html</HelpFilePath>
+    <Instructions>
+      The HistoryRead service reads the historical data for a Variable.
+      The request specifies a time range.
+      The response is a list of raw values from the history for the Variable.
+    </Instructions>
+  </Dialog>
+
+  <Dialog Name="HistoryReadEventsDlg">
+    <FilePath>History\HistoryReadEventsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample25.html</HelpFilePath>
+    <Instructions>
+      The HistoryRead service reads the historical events for a Notifier.
+      The request specifies a time range and an event filter.
+      The response is a list of events from the history for the Notifier.
+    </Instructions>
+  </Dialog>
+
+  <Dialog Name="CallMethodDlg">
+    <FilePath>Methods\CallMethodDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample11.html</HelpFilePath>
+    <Instructions>
+      The Call service invokes a Method on an Object.
+      The request specifies the Object, the Method and the input arguments.
+      The response is a list of output arguments.
+    </Instructions>
+  </Dialog>
+
+  <Dialog Name="BasicReadDlg">
+    <FilePath>Read\BasicReadDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample6.html</HelpFilePath>
+    <Instructions>
+      The Read service reads the Value of an attribute for a Node.
+      The request specifies the NodeIds of two built-in Variables.
+      The response is the Value of those Variables.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="ReadAttributeDlg">
+    <FilePath>Read\ReadAttributeDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample7.html</HelpFilePath>
+    <Instructions>
+      The Read service reads the Value of an attribute for a Node.
+      The request specifies a NodeId and an attribute.
+      The response is the value of that attribute.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="ReadWithIndexRangeDlg">
+    <FilePath>Read\ReadWithIndexRangeDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample8.html</HelpFilePath>
+    <Instructions>
+      The Read service reads the Value of an attribute for a Node.
+      The request specifies a NodeId of an array Variable and an index range.
+      The response is a subset of an array value.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="ReadWithDataEncodingDlg">
+    <FilePath>Read\ReadWithDataEncodingDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample9.html</HelpFilePath>
+    <Instructions>
+      The Read service reads the Value of an attribute for a Node.
+      The request specifies a NodeId of a structure Variable and a data encoding.
+      The response is a structure encoded using the requested data encoding.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="ReadStructureDlg">
+    <FilePath>Read\ReadStructureDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample28.html</HelpFilePath>
+    <Instructions>
+      The Read service reads the Value of an attribute for a Node.
+      The request specifies a NodeId of a Variable with ValueRank -1 and a structured DataType that is not registered at the OPC UA stack.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="BasicWriteDlg">
+    <FilePath>Write\BasicWriteDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample10.html</HelpFilePath>
+    <Instructions>
+      The Write service writes the Value of an attribute for a Node.
+      The request specifies the NodeIds of two Variables.
+      The response is the StatusCode for the operation.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="CreateSubscriptionDlg">
+    <FilePath>Subscription\CreateSubscriptionDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample16.html</HelpFilePath>
+    <Instructions>
+      The CreateSubscription service creates a new subscription.
+      The request specifies the subscription parameters.
+      The response is a StatusCode and revised values for the subscription parameters.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="ModifySubscriptionDlg">
+    <FilePath>Subscription\ModifySubscriptionDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample17.html</HelpFilePath>
+    <Instructions>
+      The ModifySubscription service modifies an existing subscription.
+      The request specifies the subscription parameters.
+      The response is a StatusCode and revised values for the subscription parameters.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="DeleteSubscriptionDlg">
+    <FilePath>Subscription\DeleteSubscriptionDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample18.html</HelpFilePath>
+    <Instructions>
+      The DeleteSubscription service deletes a subscription and all of its monitored items.
+      The request specifies the subscription identifier.
+      The response indicates whether the operation suceeded.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="CreateDataMonitoredItemsDlg">
+    <FilePath>Subscription\CreateDataMonitoredItemsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample19.html</HelpFilePath>
+    <Instructions>
+      The CreateMonitoredItems service starts monitoring the value of variables.
+      The request specifies a NodeId and a set of monitoring parameters.
+      The response is a StatusCode and revised values for the monitoring parameters.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="ModifyDataMonitoredItemsDlg">
+    <FilePath>Subscription\ModifyDataMonitoredItemsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample20.html</HelpFilePath>
+    <Instructions>
+      The ModifyMonitoredItems service modifies the parameters for existing data items.
+      The request specifies a MonitoredItemId and a set of monitoring parameters.
+      The response is a StatusCode and revised values for the monitoring parameters.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="CreateEventMonitoredItemsDlg">
+    <FilePath>Subscription\CreateEventMonitoredItemsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample21.html</HelpFilePath>
+    <Instructions>
+      The CreateMonitoredItems service starts monitoring the events of objects.
+      The request specifies a NodeId and a set of monitoring parameters including event filters.
+      The response is a StatusCode and revised values for the monitoring parameters.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="ModifyEventMonitoredItemsDlg">
+    <FilePath>Subscription\ModifyEventMonitoredItemsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample22.html</HelpFilePath>
+    <Instructions>
+      The ModifyMonitoredItems service modifies the parameters for existing event items.
+      The request specifies a MonitoredItemId and a set of monitoring parameters.
+      The response is a StatusCode and revised values for the monitoring parameters.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="DeleteMonitoredItemsDlg">
+    <FilePath>Subscription\DeleteMonitoredItemsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample23.html</HelpFilePath>
+    <Instructions>
+      The DeleteMonitoredItems service deletes one or more existing items.
+      The request specifies a MonitoredItemId and a set of monitoring parameters.
+      The response is a StatusCode and revised values for the monitoring parameters.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="SetMonitoringModeDlg">
+    <FilePath>Subscription\SetMonitoringModeDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample24.html</HelpFilePath>
+    <Instructions>
+      The SetMonitoringMode service changes the monitoring mode for a set of items.
+      The request specifies a monitoring mode and a list of monitored items.
+      The response is a StatusCode.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="MonitorConditionsDlg">
+    <FilePath>Subscription\MonitorConditionsDlg.cs</FilePath>
+    <HelpFilePath>L3ClientTutExample25.html</HelpFilePath>
+    <Instructions>
+      The Refresh method returns all of active Conditions in the Server.
+      These Conditions are then updated with events.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="AddNodesDlg">
+    <FilePath>NodeManagement\AddNodesDlg.cs</FilePath>
+    <Instructions>
+      Adds a node to the address space.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="AddReferencesDlg">
+    <FilePath>NodeManagement\AddReferencesDlg.cs</FilePath>
+    <Instructions>
+      Adds a reference to the address space.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="DeleteNodesDlg">
+    <FilePath>NodeManagement\DeleteNodesDlg.cs</FilePath>
+    <Instructions>
+      Deletes a node from the address space.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="DeleteReferencesDlg">
+    <FilePath>NodeManagement\DeleteReferencesDlg.cs</FilePath>
+    <Instructions>
+      Deletes a reference from the address space.
+    </Instructions>
+  </Dialog>
+  <Dialog Name="RegisterNodesDlg">
+    <FilePath>RegisterNodes\RegisterNodesDlg.cs</FilePath>
+    <Instructions>
+      Creates and releases aliases for nodes.
+      Some servers use these aliases to optimize access to a node.
+    </Instructions>
+  </Dialog>
+</ListOfDialogs>

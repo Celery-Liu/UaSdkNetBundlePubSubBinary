@@ -1,0 +1,6 @@
+var classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsReaderGroupModel_1_1LiveValues__BaseObjectModel =
+[
+    [ "LiveValues_BaseObjectModel", "classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsReaderGroupModel_1_1LiveValues__BaseObjectModel.html#a44a8ea60c81ddc0584207c65c24f2420", null ],
+    [ "ConfiguredDataSetReaders", "classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsReaderGroupModel_1_1LiveValues__BaseObjectModel.html#ad297ba3ccd9b9568bee34ee8a17192ea", null ],
+    [ "OperationalDataSetReaders", "classUnifiedAutomation_1_1UaServer_1_1PubSubDiagnosticsReaderGroupModel_1_1LiveValues__BaseObjectModel.html#a8fd81fcccd7527454465124e42049038", null ]
+];

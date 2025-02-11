@@ -1,0 +1,28 @@
+var classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel =
+[
+    [ "SecurityGroupModel", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#ad3d19b1f45d9d885ed5a4acd8c049254", null ],
+    [ "SecurityGroupModel", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#aa697211ba03280e13c1d2cbef86d339b", null ],
+    [ "DispatchMethod", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#ad27197c90bbc398fb68bc32b906c5538", null ],
+    [ "DispatchMethodAsync", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a5ec2bfb8c60975963388d04e0048f047", null ],
+    [ "Dispose", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#adb5299e7de6c2ae71eeae57ad6e1b4cb", null ],
+    [ "ForceKeyRotation", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a59df52273571cba7b3ea7c743fb78b20", null ],
+    [ "GetAsyncMethodDispatcher", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a93a07f820f2692f0d6828db9bca79f41", null ],
+    [ "GetGoodSecurityKey", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a57ecfd7b85ea2ddcb2cd9bfca379842e", null ],
+    [ "GetMethodDispatcher", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a8375a66b1c75d10442b5d098f4884a63", null ],
+    [ "GetSecurityKey", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a0b6079baa85b01a30191eec66db2d60e", null ],
+    [ "InvalidateKeys", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a9b3bfb665b528b19be2c1ddd23b7d811", null ],
+    [ "Keys", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a03aaf12e7f165401fdfda3e17c34a789", null ],
+    [ "FullPath", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a9075d2c1ffe5fa4696db21ae83e09d83", null ],
+    [ "GroupProperties", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a185e93349eb6e585c0a0e757306c9d3c", null ],
+    [ "KeyLifetime", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a82e16f0cfac37513707cafeb15e8a352", null ],
+    [ "MaxFutureKeyCount", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a356dd7c24c09de740d9f6ec670fb6fa1", null ],
+    [ "MaxPastKeyCount", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a18157f954ca2b7da322c510a9758b367", null ],
+    [ "Name", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a84388f14885f4b5d556ff9080b93d53c", null ],
+    [ "NodeId", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a6b01afc77f9a4b3819c86baf58eee65e", null ],
+    [ "RolePermissions", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a13a5d123ac7016c48e30f2b6e356b0eb", null ],
+    [ "SecurityGroupAsyncMethods", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a4cee24638fb14f04088852ea45ca453d", null ],
+    [ "SecurityGroupFolder", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#ad0a1a23ae40ee724d35c89e9745e74b7", null ],
+    [ "SecurityGroupId", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a2723b3c33da0d71b6c06b5119a1be86a", null ],
+    [ "SecurityGroupMethods", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a81d3c261d476f8594f1f13cc15e518d4", null ],
+    [ "SecurityPolicyUri", "classUnifiedAutomation_1_1UaServer_1_1SecurityGroupModel.html#a801b296f61901811f2795ac8216abc58", null ]
+];
